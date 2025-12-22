@@ -1,49 +1,38 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MSH Enterprise</title>
+    <title>MSH ENTERPRISE</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; }
-        header { background-color: #0d6efd; color: white; padding: 50px 20px; text-align: center; }
-        header h1 { margin: 0; font-size: 3em; }
-        header p { font-size: 1.2em; margin-top: 10px; }
-        nav { background-color: #1a1a1a; display: flex; justify-content: center; flex-wrap: wrap; }
-        nav a { color: white; padding: 15px 25px; text-decoration: none; font-weight: bold; transition: 0.3s; }
-        nav a:hover { background-color: #0d6efd; color: white; border-radius: 5px; }
-        section { padding: 60px 20px; max-width: 1200px; margin: auto; }
-        h2 { color: #0d6efd; text-align: center; margin-bottom: 50px; font-size: 2.2em; }
-        .services, .contact { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
-        .card { background: white; padding: 25px; border-radius: 15px; width: 300px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 12px 28px rgba(0,0,0,0.2); }
-        .card h3 { margin-top: 0; color: #0d6efd; font-size: 1.2em; }
-        .contact p, .location p { margin: 10px 0; font-size: 1em; }
-        a.whatsapp-link { color: #25D366; text-decoration: none; font-weight: bold; }
-        footer { background-color: #1a1a1a; color: white; text-align: center; padding: 25px; font-size: 0.95em; }
-        @media (max-width: 768px) {
-            .services, .contact { flex-direction: column; align-items: center; }
-            .card { width: 90%; }
+        body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; background:#fff; color:#333; }
+        header { padding:20px; text-align:center; background:#f4f6f8; }
+        nav { text-align:center; margin-bottom:20px; }
+        nav a { margin:0 10px; text-decoration:none; color:#333; font-weight:bold; }
+        section { padding:40px 20px; }
+        h2 { font-size:24px; font-weight:bold; margin-bottom:15px; }
+        h3 { font-size:20px; font-weight:bold; margin-bottom:10px; }
+        ul { padding-left:20px; margin-bottom:20px; }
+        a.button { display:inline-block; padding:12px 20px; background:#25D366; color:white; text-decoration:none; border-radius:6px; font-size:16px; font-weight:bold; margin-top:10px; }
+        .services { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+        .card { flex:1 1 250px; padding:15px; border:1px solid #ddd; border-radius:6px; background:#fafafa; }
+        footer { text-align:center; padding:20px; background:#f4f6f8; font-size:14px; }
+        /* Responsive */
+        @media(max-width:600px){
+            .services { flex-direction:column; }
         }
     </style>
 </head>
-<body><section style="padding:20px; text-align:center; background:#f4f6f8;">
-  <h1 style="font-size:26px; margin-bottom:10px;">
-    Welcome to MSH ENTERPRISE
-  </h1>
+<body>
 
-  <p style="font-size:16px; margin-bottom:20px;">
-    Reliable academic, professional, and online services to support students and professionals across Tanzania.
-  </p>
-
-  <a href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%20I%20am%20contacting%20you%20from%20your%20website%20(mshenterprise.github.io).%20I%20need%20help%20with..."
-     style="display:inline-block; padding:12px 20px; background:#25D366; color:white; text-decoration:none; border-radius:6px; font-size:16px;">
-    📲 Chat with us on WhatsApp
-  </a>
+<!-- Hero Section -->
+<section style="padding:40px 20px; text-align:center; background:#f4f6f8;">
+    <h1>Welcome to MSH ENTERPRISE</h1>
+    <p>Reliable academic, professional, and online services to support students and professionals across Tanzania.</p>
+    <a href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%20I%20am%20contacting%20you%20from%20your%20website.%20I%20need%20help%20with..." class="button">📲 Chat with us on WhatsApp</a>
 </section>
 
-
+<!-- Navigation -->
 <header>
     <h1>MSH Enterprise</h1>
     <p>Your trusted partner for professional services, academic support, and online assistance</p>
@@ -55,86 +44,56 @@
     <a href="#contact">Contact</a>
 </nav>
 
-<section id="services" style="padding:20px;">
-  <h2>Our Services</h2>
+<!-- Services Section -->
+<section id="services">
+    <h2>Our Services</h2>
 
-  <h3>📚 Academic Services</h3>
-  <ul>
-    <li>Academic learning materials</li>
-    <li>Private tutoring & teaching</li>
-    <li>Projects & research works</li>
-    <li>Editorial & proofreading</li>
-  </ul>
-  <a href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%20I%20am%20contacting%20you%20from%20your%20website%20for%20Academic%20Services."
-     style="color:#25D366; font-weight:bold;">
-     📲 Chat about Academic Services
-  </a>
+    <h3>📚 Academic Services</h3>
+    <ul>
+        <li>Academic learning materials</li>
+        <li>Private tutoring & teaching</li>
+        <li>Projects & research works</li>
+        <li>Editorial & proofreading</li>
+    </ul>
+    <a href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%20I%20am%20contacting%20you%20from%20your%20website%20for%20Academic%20Services." class="button">📲 Chat about Academic Services</a>
+    <hr>
 
-  <hr>
+    <h3>🧑‍💼 Professional Services</h3>
+    <ul>
+        <li>CV / Resume writing</li>
+        <li>Cover letter & official letter writing</li>
+        <li>Consultation services</li>
+    </ul>
+    <a href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%20I%20am%20contacting%20you%20from%20your%20website%20for%20Professional%20Services." class="button">📲 Chat about Professional Services</a>
+    <hr>
 
-  <h3>🧑‍💼 Professional Services</h3>
-  <ul>
-    <li>CV / Resume writing</li>
-    <li>Cover letter & official letter writing</li>
-    <li>Consultation services</li>
-  </ul>
-  <a href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%20I%20am%20contacting%20you%20from%20your%20website%20for%20Professional%20Services."
-     style="color:#25D366; font-weight:bold;">
-     📲 Chat about Professional Services
-  </a>
-
-  <hr>
-
-  <h3>🌐 Online & Portal Services</h3>
-  <ul>
-    <li>NEST / PPRA services</li>
-    <li>University & College applications</li>
-    <li>Job applications (AJIRA)</li>
-    <li>TAUSI portal services</li>
-    <li>TRA, Police, RITA, NIDA & ESS services</li>
-  </ul>
-  <a href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%20I%20am%20contacting%20you%20from%20your%20website%20for%20Online%20and%20Portal%20Services."
-     style="color:#25D366; font-weight:bold;">
-     📲 Chat about Online Services
-  </a>
+    <h3>🌐 Online & Portal Services</h3>
+    <ul>
+        <li>NEST / PPRA services</li>
+        <li>University & College applications</li>
+        <li>Job applications (AJIRA)</li>
+        <li>TAUSI portal services</li>
+        <li>TRA, Police, RITA, NIDA & ESS services</li>
+    </ul>
+    <a href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%20I%20am%20contacting%20you%20from%20your%20website%20for%20Online%20and%20Portal%20Services." class="button">📲 Chat about Online Services</a>
 </section>
 
-
-<section id="about">
-    <h2>About Us</h2>
-    <p>MSH Enterprise is committed to providing comprehensive professional services including academic support, document writing, tutoring, consultation, and online services for individuals, students, and businesses. We serve clients throughout Dar es Salaam, Tanzania, helping them achieve success efficiently and professionally.</p>
+<!-- Trust & Location Section -->
+<section id="about" style="padding:40px 20px; background:#eef2f5;">
+    <h2>Why Choose MSH ENTERPRISE?</h2>
+    <ul>
+        <li>Trusted by students and professionals across Tanzania</li>
+        <li>Reliable and timely delivery of services</li>
+        <li>Easy communication via WhatsApp with clear service tagging</li>
+    </ul>
+    <p>📍 Located in Dar es Salaam, Tanzania</p>
 </section>
 
-<section id="contact">
-    <h2>Contact Us</h2>
-    <div class="contact">
-        <div class="card">
-            <h3>Email</h3>
-            <p>mshenterprise20@gmail.com</p>
-        </div>
-        <div class="card">
-            <h3>WhatsApp</h3>
-            <p><a href="https://wa.me/255777749831" class="whatsapp-link">Chat with us</a></p>
-        </div>
-        <div class="card location">
-            <h3>Location</h3>
-            <p>Dar es Salaam, Tanzania</p>
-        </div>
-    </div>
-</section>
-<section id="about" style="padding:20px; background:#eef2f5;">
-  <h2>Why Choose MSH ENTERPRISE?</h2>
-  <ul>
-    <li>Trusted by students and professionals across Tanzania</li>
-    <li>Reliable and timely delivery of services</li>
-    <li>Easy communication via WhatsApp with clear service tagging</li>
-  </ul>
-  <p>📍 Located in Dar es Salaam, Tanzania</p>
-</section>
-
+<!-- Footer -->
 <footer>
     <p>&copy; 2025 MSH Enterprise. All Rights Reserved. Providing Professional and Online Services in Tanzania</p>
 </footer>
+
 <!-- Floating WhatsApp Button -->
 <a href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%20I%20am%20contacting%20you%20from%20your%20website."
    style="position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:15px; border-radius:50%; text-align:center; font-size:24px; text-decoration:none; box-shadow: 0 4px 6px rgba(0,0,0,0.3); z-index:1000;">
