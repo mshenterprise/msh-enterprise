@@ -5,28 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MSH ENTERPRISE</title>
     <style>
-        body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; background:#fff; color:#333; }
-        header { padding:20px; text-align:center; background:#f4f6f8; }
-        nav { text-align:center; margin-bottom:20px; }
-        nav a { margin:0 10px; text-decoration:none; color:#333; font-weight:bold; }
-        section { padding:40px 20px; }
-        h2 { font-size:24px; font-weight:bold; margin-bottom:15px; }
-        h3 { font-size:20px; font-weight:bold; margin-bottom:10px; }
-        ul { padding-left:20px; margin-bottom:20px; }
-        a.button { display:inline-block; padding:12px 20px; background:#25D366; color:white; text-decoration:none; border-radius:6px; font-size:16px; font-weight:bold; margin-top:10px; }
+        /* Basic Reset */
+        * { margin:0; padding:0; box-sizing:border-box; }
+
+        body { font-family: 'Arial', sans-serif; line-height:1.6; color:#333; background:#fefefe; }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color:white; text-align:center;
+            padding:60px 20px;
+        }
+        .hero h1 { font-size:32px; margin-bottom:15px; font-weight:bold; }
+        .hero p { font-size:18px; margin-bottom:25px; }
+        .hero .button { background:white; color:#25D366; padding:15px 25px; border-radius:30px; font-size:16px; font-weight:bold; text-decoration:none; transition:0.3s; }
+        .hero .button:hover { background:#e6e6e6; }
+
+        /* Navigation */
+        nav { text-align:center; padding:15px; background:#f4f4f4; }
+        nav a { margin:0 12px; color:#333; text-decoration:none; font-weight:bold; transition:0.3s; }
+        nav a:hover { color:#25D366; }
+
+        /* Sections */
+        section { padding:50px 20px; }
+        section:nth-of-type(even) { background:#f7f9fb; }
+
+        h2 { font-size:26px; margin-bottom:20px; font-weight:bold; text-align:center; }
+        h3 { font-size:20px; margin-bottom:10px; font-weight:bold; }
+        ul { margin-bottom:20px; padding-left:20px; }
+
+        /* Services Cards */
         .services { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
-        .card { flex:1 1 250px; padding:15px; border:1px solid #ddd; border-radius:6px; background:#fafafa; }
-        footer { text-align:center; padding:20px; background:#f4f6f8; font-size:14px; }
+        .card { flex:1 1 250px; background:white; padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); transition:0.3s; }
+        .card:hover { box-shadow:0 6px 15px rgba(0,0,0,0.15); }
+        .card a { display:inline-block; margin-top:10px; background:#25D366; color:white; padding:10px 15px; border-radius:25px; text-decoration:none; font-weight:bold; transition:0.3s; }
+        .card a:hover { background:#128C7E; }
+
+        /* Footer */
+        footer { text-align:center; padding:25px; background:#f4f4f4; font-size:14px; }
+
+        /* Floating WhatsApp */
+        .whatsapp-float { position:fixed; bottom:25px; right:25px; background:#25D366; color:white; padding:18px; border-radius:50%; font-size:28px; text-align:center; text-decoration:none; box-shadow:0 5px 15px rgba(0,0,0,0.3); z-index:1000; transition:0.3s; }
+        .whatsapp-float:hover { background:#128C7E; }
+
         /* Responsive */
-        @media(max-width:600px){
-            .services { flex-direction:column; }
+        @media(max-width:768px){
+            .services { flex-direction:column; align-items:center; }
         }
     </style>
 </head>
 <body>
 
 <!-- Hero Section -->
-<section style="padding:40px 20px; text-align:center; background:#f4f6f8;">
+<section class="hero">
     <h1>Welcome to MSH ENTERPRISE</h1>
     <p>Reliable academic, professional, and online services to support students and professionals across Tanzania.</p>
     <a href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%20I%20am%20contacting%20you%20from%20your%20website.%20I%20need%20help%20with..." class="button">📲 Chat with us on WhatsApp</a>
@@ -34,8 +65,8 @@
 
 <!-- Navigation -->
 <header>
-    <h1>MSH Enterprise</h1>
-    <p>Your trusted partner for professional services, academic support, and online assistance</p>
+    <h1 style="text-align:center; margin-top:30px;">MSH Enterprise</h1>
+    <p style="text-align:center;">Your trusted partner for professional services, academic support, and online assistance</p>
 </header>
 
 <nav>
@@ -48,38 +79,44 @@
 <section id="services">
     <h2>Our Services</h2>
 
-    <h3>📚 Academic Services</h3>
-    <ul>
-        <li>Academic learning materials</li>
-        <li>Private tutoring & teaching</li>
-        <li>Projects & research works</li>
-        <li>Editorial & proofreading</li>
-    </ul>
-    <a href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%20I%20am%20contacting%20you%20from%20your%20website%20for%20Academic%20Services." class="button">📲 Chat about Academic Services</a>
-    <hr>
+    <div class="services">
+        <div class="card">
+            <h3>📚 Academic Services</h3>
+            <ul>
+                <li>Academic learning materials</li>
+                <li>Private tutoring & teaching</li>
+                <li>Projects & research works</li>
+                <li>Editorial & proofreading</li>
+            </ul>
+            <a href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%20I%20am%20contacting%20you%20from%20your%20website%20for%20Academic%20Services.">📲 Chat</a>
+        </div>
 
-    <h3>🧑‍💼 Professional Services</h3>
-    <ul>
-        <li>CV / Resume writing</li>
-        <li>Cover letter & official letter writing</li>
-        <li>Consultation services</li>
-    </ul>
-    <a href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%20I%20am%20contacting%20you%20from%20your%20website%20for%20Professional%20Services." class="button">📲 Chat about Professional Services</a>
-    <hr>
+        <div class="card">
+            <h3>🧑‍💼 Professional Services</h3>
+            <ul>
+                <li>CV / Resume writing</li>
+                <li>Cover letter & official letter writing</li>
+                <li>Consultation services</li>
+            </ul>
+            <a href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%20I%20am%20contacting%20you%20from%20your%20website%20for%20Professional%20Services.">📲 Chat</a>
+        </div>
 
-    <h3>🌐 Online & Portal Services</h3>
-    <ul>
-        <li>NEST / PPRA services</li>
-        <li>University & College applications</li>
-        <li>Job applications (AJIRA)</li>
-        <li>TAUSI portal services</li>
-        <li>TRA, Police, RITA, NIDA & ESS services</li>
-    </ul>
-    <a href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%20I%20am%20contacting%20you%20from%20your%20website%20for%20Online%20and%20Portal%20Services." class="button">📲 Chat about Online Services</a>
+        <div class="card">
+            <h3>🌐 Online & Portal Services</h3>
+            <ul>
+                <li>NEST / PPRA services</li>
+                <li>University & College applications</li>
+                <li>Job applications (AJIRA)</li>
+                <li>TAUSI portal services</li>
+                <li>TRA, Police, RITA, NIDA & ESS services</li>
+            </ul>
+            <a href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%20I%20am%20contacting%20you%20from%20your%20website%20for%20Online%20and%20Portal%20Services.">📲 Chat</a>
+        </div>
+    </div>
 </section>
 
 <!-- Trust & Location Section -->
-<section id="about" style="padding:40px 20px; background:#eef2f5;">
+<section id="about">
     <h2>Why Choose MSH ENTERPRISE?</h2>
     <ul>
         <li>Trusted by students and professionals across Tanzania</li>
@@ -95,10 +132,7 @@
 </footer>
 
 <!-- Floating WhatsApp Button -->
-<a href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%20I%20am%20contacting%20you%20from%20your%20website."
-   style="position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:15px; border-radius:50%; text-align:center; font-size:24px; text-decoration:none; box-shadow: 0 4px 6px rgba(0,0,0,0.3); z-index:1000;">
-   📲
-</a>
+<a href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%20I%20am%20contacting%20you%20from%20your%20website." class="whatsapp-float">📲</a>
 
 </body>
 </html>
