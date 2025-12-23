@@ -1,64 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MSH ENTERPRISE</title>
-    <style>
-        /* Basic Reset */
-        * { margin:0; padding:0; box-sizing:border-box; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MSH ENTERPRISE | Academic & Professional Services</title>
+  <meta name="description" content="MSH ENTERPRISE offers academic support, professional services, government portal assistance, tutoring, consultancy, and digital services in Tanzania." />
 
-        body { font-family: 'Arial', sans-serif; line-height:1.6; color:#333; background:#f2f5f7; }
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #25D366, #128C7E);
-            color:white; text-align:center;
-            padding:60px 20px;
-        }
-        .hero h1 { font-size:32px; margin-bottom:15px; font-weight:bold; }
-        .hero p { font-size:18px; margin-bottom:25px; }
-        .hero .button { background:white; color:#25D366; padding:15px 25px; border-radius:30px; font-size:16px; font-weight:bold; text-decoration:none; transition:0.3s; }
-        .hero .button:hover { background:#e6e6e6; }
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-        /* Navigation */
-        nav { text-align:center; padding:15px; background:#e0e6ed; }
-        nav a { margin:0 12px; color:#333; text-decoration:none; font-weight:bold; transition:0.3s; }
-        nav a:hover { color:#25D366; }
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #f4f6f8; color: #333; line-height: 1.6; }
+    header { background: linear-gradient(135deg, #0f4c81, #1e90c2); color: #fff; padding: 50px 20px; text-align: center; }
+    header h1 { font-size: 2.2rem; margin-bottom: 10px; }
+    header p { font-size: 1.1rem; max-width: 700px; margin: auto; }
 
-        /* Sections */
-        section { padding:50px 20px; border-radius:8px; margin-bottom:20px; }
-        section:nth-of-type(even) { background:#f7f9fb; }
-        section:nth-of-type(odd):not(.hero) { background:#ffffff; }
+    .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
 
-        h2 { font-size:26px; margin-bottom:20px; font-weight:bold; text-align:center; }
-        h3 { font-size:20px; margin-bottom:10px; font-weight:bold; }
-        ul { margin-bottom:20px; padding-left:20px; }
+    h2 { color: #0f4c81; margin-bottom: 15px; }
+    h3 { margin-top: 20px; color: #1e90c2; }
 
-        /* Services Cards */
-        .services { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
-        .card { flex:1 1 250px; background:#fefefe; padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); transition:0.3s; }
-        .card:hover { box-shadow:0 6px 15px rgba(0,0,0,0.15); }
-        .card a { display:inline-block; margin-top:10px; background:#25D366; color:white; padding:10px 15px; border-radius:25px; text-decoration:none; font-weight:bold; transition:0.3s; }
-        .card a:hover { background:#128C7E; }
+    ul { margin-left: 20px; margin-bottom: 20px; }
+    ul li { margin-bottom: 8px; }
 
-        /* Contact Section */
-        .contact p { font-size:16px; margin-bottom:10px; text-align:center; }
+    .card { background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px; }
 
-        /* Footer */
-        footer { text-align:center; padding:25px; background:#e0e6ed; font-size:14px; }
+    .cta { text-align: center; background: #0f4c81; color: #fff; padding: 40px 20px; border-radius: 12px; }
+    .cta h2 { color: #fff; }
 
-        /* Floating WhatsApp */
-        .whatsapp-float { position:fixed; bottom:25px; right:25px; background:#25D366; color:white; padding:18px; border-radius:50%; font-size:28px; text-align:center; text-decoration:none; box-shadow:0 5px 15px rgba(0,0,0,0.3); z-index:1000; transition:0.3s; }
-        .whatsapp-float:hover { background:#128C7E; }
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: #fff;
+      padding: 14px 22px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      margin-top: 15px;
+    }
 
-        /* Responsive */
-        @media(max-width:768px){
-            .services { flex-direction:column; align-items:center; }
-        }
-    </style>
+    footer { text-align: center; padding: 25px; background: #fff; margin-top: 40px; font-size: 0.95rem; }
+
+    footer a { color: #0f4c81; text-decoration: none; }
+  </style>
 </head>
 <body>
+
+<header>
+  <h1>MSH ENTERPRISE</h1>
+  <p>Your trusted partner for academic support, professional services, digital solutions, and government online assistance in Tanzania.</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>📚 Academic Services</h2>
+
+    <h3>Academic Support & Guidance</h3>
+    <ul>
+      <li>Assignment support (Diploma, Bachelor & Master’s level)</li>
+      <li>Research proposal & dissertation guidance</li>
+      <li>Final year project support</li>
+      <li>Formatting (APA, MLA, Harvard, Chicago)</li>
+      <li>Literature review & methodology support</li>
+      <li>Plagiarism checking & ethical editing</li>
+      <li>Data analysis support (SPSS, Excel – basic)</li>
+    </ul>
+    <a class="whatsapp-btn" target="_blank" href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%0A%0AI%20need%20Academic%20Support%20services.%0AService:%20Academic%20Writing%20/%20Research%20/%20Projects.%0A%0AThank%20you."><i class="fab fa-whatsapp"></i> Request Academic Services</a>
+
+    <h3>Tutoring & Learning Support</h3>
+    <ul>
+      <li>One-on-one tutoring (online & physical)</li>
+      <li>Group tutoring & exam preparation</li>
+      <li>Computer basics & ICT training</li>
+      <li>Online learning platform assistance</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>🧠 Professional & Office Services</h2>
+
+    <h3>Editorial & Language Services</h3>
+    <ul>
+      <li>Professional proofreading & copyediting</li>
+      <li>Academic & business report editing</li>
+      <li>Proposal & project document editing</li>
+      <li>English ↔ Swahili translation</li>
+    </ul>
+    <a class="whatsapp-btn" target="_blank" href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%0A%0AI%20need%20Editorial%20and%20Proofreading%20services.%0AService:%20Editing%20/%20Translation.%0A%0AThank%20you."><i class="fab fa-whatsapp"></i> Request Editorial Services</a>
+
+    <h3>Business & Digital Support</h3>
+    <ul>
+      <li>Business plans & company profiles</li>
+      <li>Project proposals & feasibility studies</li>
+      <li>CV & resume writing</li>
+      <li>Online applications & form filling</li>
+      <li>Email setup, PDF editing & office documents</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>🏛 Government & Online Portal Services</h2>
+
+    <ul>
+      <li>NIDA services (NIN follow‑up & verification)</li>
+      <li>RITA birth & death certificates</li>
+      <li>NACTE, TCU & University applications</li>
+      <li>HESLB loan application support</li>
+      <li>NECTA results checking</li>
+      <li>AJIRA, TAUSI & Police Portal services</li>
+      <li>BRELA & TIN (TRA) application guidance</li>
+    </ul>
+    <a class="whatsapp-btn" target="_blank" href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%0A%0AI%20need%20Government%20Online%20Services%20assistance.%0AService:%20NIDA/RITA/Applications.%0A%0AThank%20you."><i class="fab fa-whatsapp"></i> Request Government Services</a>
+  </div>
+
+  <div class="cta">
+    <h2>Need Any of These Services?</h2>
+    <p>Click below and tell us the specific service you need. We respond fast!</p>
+
+    <a class="whatsapp-btn" target="_blank" href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%0A%0AI%20am%20interested%20in%20your%20services.%0A%0AService%20needed:%20[Please%20describe%20the%20service]%0A%0AThank%20you.">
+      <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  <p>
+    📍 Dar es Salaam | 📞 <a href="tel:+255777749831">+255 777 749 831</a> | 
+    💬 <a href="https://wa.me/255777749831" target="_blank">WhatsApp</a> | 
+    ✉️ mshenterprise20@gmail.com<br>
+    🌐 <a href="https://mshenterprise.github.io/msh-enterprise" target="_blank">mshenterprise.github.io/msh-enterprise</a>
+  </p>
+  <p>© 2025 MSH ENTERPRISE. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
 
 <!-- Hero Section -->
 <section class="hero">
