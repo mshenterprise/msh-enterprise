@@ -15,9 +15,13 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
     body { background: #f4f6f8; color: #333; line-height: 1.6; }
-    header { background: linear-gradient(135deg, #0f4c81, #1e90c2); color: #fff; padding: 50px 20px; text-align: center; }
+    header { background: linear-gradient(135deg, #0f4c81, #1e90c2); color: #fff; padding: 50px 20px; text-align: center; position: relative; }
     header h1 { font-size: 2.2rem; margin-bottom: 10px; }
     header p { font-size: 1.1rem; max-width: 700px; margin: auto; }
+
+    .lang-toggle { position: absolute; top: 20px; right: 20px; background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 8px; cursor: pointer; font-weight: 600; }
+    .lang-toggle span { margin: 0 5px; color: #fff; }
+    .lang-toggle .active { text-decoration: underline; }
 
     .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
 
@@ -48,85 +52,71 @@
     footer { text-align: center; padding: 25px; background: #fff; margin-top: 40px; font-size: 0.95rem; }
 
     footer a { color: #0f4c81; text-decoration: none; }
+
+    .hidden { display: none; }
   </style>
 </head>
 <body>
 
 <header>
   <h1>MSH ENTERPRISE</h1>
-  <p>Your trusted partner for academic support, professional services, digital solutions, and government online assistance in Tanzania.</p>
+  <p class="lang-content" data-en="Your trusted partner for academic support, professional services, digital solutions, and government online assistance in Tanzania." data-sw="Mshirika wako wa kuaminika kwa huduma za kitaaluma, kitaalamu, kidijitali na huduma za mifumo ya serikali mtandaoni nchini Tanzania.">Your trusted partner for academic support, professional services, digital solutions, and government online assistance in Tanzania.</p>
+
+  <div class="lang-toggle">
+    <span id="en-toggle" class="active">EN</span> | <span id="sw-toggle">SW</span>
+  </div>
 </header>
 
 <div class="container">
 
   <div class="card">
-    <h2>📚 Academic Services</h2>
+    <h2 class="lang-content" data-en="📚 Academic Services" data-sw="📚 Huduma za Kitaaluma">📚 Academic Services</h2>
 
-    <h3>Academic Support & Guidance</h3>
+    <h3 class="lang-content" data-en="Academic Support & Guidance" data-sw="Msaada wa Masomo na Utafiti">Academic Support & Guidance</h3>
     <ul>
-      <li>Assignment support (Diploma, Bachelor & Master’s level)</li>
-      <li>Research proposal & dissertation guidance</li>
-      <li>Final year project support</li>
-      <li>Formatting (APA, MLA, Harvard, Chicago)</li>
-      <li>Literature review & methodology support</li>
-      <li>Plagiarism checking & ethical editing</li>
-      <li>Data analysis support (SPSS, Excel – basic)</li>
+      <li class="lang-content" data-en="Assignment support (Diploma, Bachelor & Master’s level)" data-sw="Msaada wa assignments (Astashahada, Shahada, Uzamili)">Assignment support (Diploma, Bachelor & Master’s level)</li>
+      <li class="lang-content" data-en="Research proposal & dissertation guidance" data-sw="Msaada wa proposal na tasnifu">Research proposal & dissertation guidance</li>
+      <li class="lang-content" data-en="Final year project support" data-sw="Msaada wa mradi wa mwisho wa masomo">Final year project support</li>
+      <li class="lang-content" data-en="Formatting (APA, MLA, Harvard, Chicago)" data-sw="Uandaaji wa nyaraka (APA, MLA, Harvard, Chicago)">Formatting (APA, MLA, Harvard, Chicago)</li>
+      <li class="lang-content" data-en="Literature review & methodology support" data-sw="Msaada wa literature review & methodology">Literature review & methodology support</li>
+      <li class="lang-content" data-en="Plagiarism checking & ethical editing" data-sw="Uhakiki wa plagiarism na uhariri wa kimaadili">Plagiarism checking & ethical editing</li>
+      <li class="lang-content" data-en="Data analysis support (SPSS, Excel – basic)" data-sw="Msaada wa uchambuzi wa data (SPSS, Excel – msingi)">Data analysis support (SPSS, Excel – basic)</li>
     </ul>
-    <a class="whatsapp-btn" target="_blank" href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%0A%0AI%20need%20Academic%20Support%20services.%0AService:%20Academic%20Writing%20/%20Research%20/%20Projects.%0A%0AThank%20you."><i class="fab fa-whatsapp"></i> Request Academic Services</a>
-
-    <h3>Tutoring & Learning Support</h3>
-    <ul>
-      <li>One-on-one tutoring (online & physical)</li>
-      <li>Group tutoring & exam preparation</li>
-      <li>Computer basics & ICT training</li>
-      <li>Online learning platform assistance</li>
-    </ul>
+    <a class="whatsapp-btn lang-content" data-en-href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%0A%0AI%20need%20Academic%20Support%20services.%0AService:%20Academic%20Writing%20/%20Research%20/%20Projects.%0A%0AThank%20you." data-sw-href="https://wa.me/255777749831?text=Habari%20MSH%20ENTERPRISE,%0A%0ANahitaji%20huduma%20za%20kitaaluma.%0A%0AService:%20Kuandika%20/ Tafiti / Miradi.%0A%0AAsante." href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%0A%0AI%20need%20Academic%20Support%20services.%0AService:%20Academic%20Writing%20/%20Research%20/%20Projects.%0A%0AThank%20you." target="_blank"><i class="fab fa-whatsapp"></i> <span class="lang-text">Request Academic Services</span></a>
   </div>
 
   <div class="card">
-    <h2>🧠 Professional & Office Services</h2>
+    <h2 class="lang-content" data-en="🧠 Professional & Office Services" data-sw="🧠 Huduma za Kitaalamu & Ofisi">🧠 Professional & Office Services</h2>
 
-    <h3>Editorial & Language Services</h3>
+    <h3 class="lang-content" data-en="Editorial & Language Services" data-sw="Huduma za Uhariri & Lugha">Editorial & Language Services</h3>
     <ul>
-      <li>Professional proofreading & copyediting</li>
-      <li>Academic & business report editing</li>
-      <li>Proposal & project document editing</li>
-      <li>English ↔ Swahili translation</li>
+      <li class="lang-content" data-en="Professional proofreading & copyediting" data-sw="Kusahihisha maandishi & copyediting">Professional proofreading & copyediting</li>
+      <li class="lang-content" data-en="Academic & business report editing" data-sw="Kuhariri ripoti za kitaaluma na biashara">Academic & business report editing</li>
+      <li class="lang-content" data-en="Proposal & project document editing" data-sw="Kuhariri proposal & nyaraka za miradi">Proposal & project document editing</li>
+      <li class="lang-content" data-en="English ↔ Swahili translation" data-sw="Tafsiri Kiingereza ↔ Kiswahili">English ↔ Swahili translation</li>
     </ul>
-    <a class="whatsapp-btn" target="_blank" href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%0A%0AI%20need%20Editorial%20and%20Proofreading%20services.%0AService:%20Editing%20/%20Translation.%0A%0AThank%20you."><i class="fab fa-whatsapp"></i> Request Editorial Services</a>
-
-    <h3>Business & Digital Support</h3>
-    <ul>
-      <li>Business plans & company profiles</li>
-      <li>Project proposals & feasibility studies</li>
-      <li>CV & resume writing</li>
-      <li>Online applications & form filling</li>
-      <li>Email setup, PDF editing & office documents</li>
-    </ul>
+    <a class="whatsapp-btn lang-content" data-en-href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%0A%0AI%20need%20Editorial%20and%20Proofreading%20services.%0AService:%20Editing%20/%20Translation.%0A%0AThank%20you." data-sw-href="https://wa.me/255777749831?text=Habari%20MSH%20ENTERPRISE,%0A%0ANahitaji%20Huduma%20za%20Uhariri%20na%20Tafsiri.%0A%0AAsante." href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%0A%0AI%20need%20Editorial%20and%20Proofreading%20services.%0AService:%20Editing%20/%20Translation.%0A%0AThank%20you." target="_blank"><i class="fab fa-whatsapp"></i> <span class="lang-text">Request Editorial Services</span></a>
   </div>
 
   <div class="card">
-    <h2>🏛 Government & Online Portal Services</h2>
+    <h2 class="lang-content" data-en="🏛 Government & Online Portal Services" data-sw="🏛 Huduma za Serikali Mtandaoni">🏛 Government & Online Portal Services</h2>
 
     <ul>
-      <li>NIDA services (NIN follow‑up & verification)</li>
-      <li>RITA birth & death certificates</li>
-      <li>NACTE, TCU & University applications</li>
-      <li>HESLB loan application support</li>
-      <li>NECTA results checking</li>
-      <li>AJIRA, TAUSI & Police Portal services</li>
-      <li>BRELA & TIN (TRA) application guidance</li>
+      <li class="lang-content" data-en="NIDA services (NIN follow-up & verification)" data-sw="Huduma za NIDA (Ufuatiliaji NIN & uthibitisho)">NIDA services (NIN follow-up & verification)</li>
+      <li class="lang-content" data-en="RITA birth & death certificates" data-sw="Vyeti vya kuzaliwa & vifo vya RITA">RITA birth & death certificates</li>
+      <li class="lang-content" data-en="NACTE, TCU & University applications" data-sw="Maombi ya NACTE, TCU & Chuo Kikuu">NACTE, TCU & University applications</li>
+      <li class="lang-content" data-en="HESLB loan application support" data-sw="Msaada wa maombi ya mkopo HESLB">HESLB loan application support</li>
+      <li class="lang-content" data-en="NECTA results checking" data-sw="Kukagua matokeo ya NECTA">NECTA results checking</li>
+      <li class="lang-content" data-en="AJIRA, TAUSI & Police Portal services" data-sw="Huduma za AJIRA, TAUSI & Polisi mtandaoni">AJIRA, TAUSI & Police Portal services</li>
+      <li class="lang-content" data-en="BRELA & TIN (TRA) application guidance" data-sw="Mwongozo wa maombi BRELA & TIN (TRA)">BRELA & TIN (TRA) application guidance</li>
     </ul>
-    <a class="whatsapp-btn" target="_blank" href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%0A%0AI%20need%20Government%20Online%20Services%20assistance.%0AService:%20NIDA/RITA/Applications.%0A%0AThank%20you."><i class="fab fa-whatsapp"></i> Request Government Services</a>
+    <a class="whatsapp-btn lang-content" data-en-href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%0A%0AI%20need%20Government%20Online%20Services%20assistance.%0AService:%20NIDA/RITA/Applications.%0A%0AThank%20you." data-sw-href="https://wa.me/255777749831?text=Habari%20MSH%20ENTERPRISE,%0A%0ANahitaji%20Huduma%20za%20Serikali%20Mtandaoni.%0A%0AService:%20NIDA/RITA/Maombi.%0A%0AAsante." href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%0A%0AI%20need%20Government%20Online%20Services%20assistance.%0AService:%20NIDA/RITA/Applications.%0A%0AThank%20you." target="_blank"><i class="fab fa-whatsapp"></i> <span class="lang-text">Request Government Services</span></a>
   </div>
 
-  <div class="cta">
-    <h2>Need Any of These Services?</h2>
-    <p>Click below and tell us the specific service you need. We respond fast!</p>
-
-    <a class="whatsapp-btn" target="_blank" href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%0A%0AI%20am%20interested%20in%20your%20services.%0A%0AService%20needed:%20[Please%20describe%20the%20service]%0A%0AThank%20you.">
-      <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-    </a>
+  <div class="cta lang-content" data-en="Need Any of These Services?" data-sw="Unahitaji Huduma Hizi?">
+    <h2 class="lang-text">Need Any of These Services?</h2>
+    <p class="lang-text" data-en="Click below and tell us the specific service you need. We respond fast!" data-sw="Bonyeza hapa chini na utueleze huduma unazohitaji. Tunajibu haraka!">Click below and tell us the specific service you need. We respond fast!</p>
+    <a class="whatsapp-btn lang-content" data-en-href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%0A%0AI%20am%20interested%20in%20your%20services.%0A%0AService%20needed:%20[Please%20describe%20the%20service]%0A%0AThank%20you." data-sw-href="https://wa.me/255777749831?text=Habari%20MSH%20ENTERPRISE,%0A%0ANiaje%20huduma%20zenu.%0A%0AHuduma%20unazohitaji:%20[Tafadhali%20eleza]%0A%0AAsante." href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE,%0A%0AI%20am%20interested%20in%20your%20services.%0A%0AService%20needed:%20[Please%20describe%20the%20service]%0A%0AThank%20you." target="_blank"><i class="fab fa-whatsapp"></i> <span class="lang-text">Chat on WhatsApp</span></a>
   </div>
 
 </div>
@@ -140,6 +130,29 @@
   </p>
   <p>© 2025 MSH ENTERPRISE. All Rights Reserved.</p>
 </footer>
+
+<script>
+  const enToggle = document.getElementById('en-toggle');
+  const swToggle = document.getElementById('sw-toggle');
+  const langElements = document.querySelectorAll('.lang-content');
+
+  function setLanguage(lang){
+    langElements.forEach(el => {
+      if(lang === 'en'){
+        el.textContent = el.getAttribute('data-en') || el.textContent;
+        if(el.tagName === 'A') el.href = el.getAttribute('data-en-href');
+      } else {
+        el.textContent = el.getAttribute('data-sw') || el.textContent;
+        if(el.tagName === 'A') el.href = el.getAttribute('data-sw-href');
+      }
+    });
+    enToggle.classList.toggle('active', lang==='en');
+    swToggle.classList.toggle('active', lang==='sw');
+  }
+
+  enToggle.addEventListener('click',()=>setLanguage('en'));
+  swToggle.addEventListener('click',()=>setLanguage('sw'));
+</script>
 
 </body>
 </html>
