@@ -55,6 +55,35 @@
     footer a { color: #0f4c81; text-decoration: none; }
 
     .hidden { display: none; }
+    /* ===== LIGHT MODE (DEFAULT) ===== */
+body {
+  background-color: #ffffff;
+  color: #111111;
+  transition: 0.3s ease;
+}
+
+/* ===== DARK MODE ===== */
+body.dark-mode {
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+/* Optional improvement for sections/cards */
+.dark-mode section,
+.dark-mode .card {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+/* Theme button style */
+#themeToggle {
+  cursor: pointer;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+}
   </style>
 </head>
 <body>
