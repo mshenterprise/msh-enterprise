@@ -238,7 +238,7 @@ body.dark-mode {
     ✉️ mshenterprise20@gmail.com<br>
     🌐 <a href="https://mshenterprise.github.io/msh-enterprise" target="_blank">mshenterprise.github.io/msh-enterprise</a>
   </p>
-  <p>© 2025 MSH ENTERPRISE. All Rights Reserved.</p>
+  <p>© <span id="year"></span> MSH ENTERPRISE. All Rights Reserved.</p>
 </footer>
 
 <script>
@@ -263,6 +263,36 @@ body.dark-mode {
   enToggle.addEventListener('click',()=>setLanguage('en'));
   swToggle.addEventListener('click',()=>setLanguage('sw'));
 </script>
+<script>
+function toggleTheme() {
+  document.body.classList.toggle("dark-mode");
 
+  const btn = document.getElementById("themeToggle");
+
+  if (document.body.classList.contains("dark-mode")) {
+    btn.innerText = "☀️ Light Mode";
+    localStorage.setItem("theme", "dark");
+  } else {
+    btn.innerText = "🌙 Dark Mode";
+    localStorage.setItem("theme", "light");
+  }
+}
+
+// Load saved theme when page opens
+window.onload = function () {
+  const savedTheme = localStorage.getItem("theme");
+  const btn = document.getElementById("themeToggle");
+
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-mode");
+    btn.innerText = "☀️ Light Mode";
+  } else {
+    btn.innerText = "🌙 Dark Mode";
+  }
+
+  // Auto year for footer
+  document.getElementById("year").textContent = new Date().getFullYear();
+};
+</script>
 </body>
 </html>
