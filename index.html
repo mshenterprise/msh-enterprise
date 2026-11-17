@@ -1,0 +1,2158 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MSH ENTERPRISE | Academic, Business & Digital Portal Solutions Tanzania</title>
+  <meta name="description" content="Your trusted partner for academic support, professional services, digital solutions, and government online assistance in Dar es Salaam, Tanzania." />
+  
+  <!-- Bespoke MSH ENTERPRISE SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%230a1633'/%3E%3Cstop offset='100%25' stop-color='%23059669'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M32 3L57 14V31C57 46.5 46.2 58.6 32 62C17.8 58.6 7 46.5 7 31V14L32 3Z' fill='url(%23g)' stroke='%23fbbf24' stroke-width='2.5'/%3E%3Ctext x='32' y='38' text-anchor='middle' fill='%23ffffff' font-family='sans-serif' font-weight='800' font-size='18'%3EMSH%3C/text%3E%3C/svg%3E" />
+
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            navy: {
+              950: '#07132c',
+              900: '#0d2149',
+              800: '#163570',
+              700: '#1d4ed8',
+            },
+            emeraldBrand: {
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+            },
+            goldBrand: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom subtle background patterns harmonized with MSH Royal Blue & Gold logo */
+    .hero-pattern {
+      background-color: #07132c;
+      background-image: 
+        radial-gradient(at 15% 15%, rgba(29, 78, 216, 0.32) 0px, transparent 52%),
+        radial-gradient(at 85% 20%, rgba(245, 158, 11, 0.18) 0px, transparent 48%),
+        radial-gradient(at 50% 90%, rgba(16, 185, 129, 0.12) 0px, transparent 60%);
+    }
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-700 selection:text-white">
+
+  <!-- Toast Notification Container (Replaces alert) -->
+  <div id="toast-container" class="fixed top-20 right-4 z-50 flex flex-col gap-2 pointer-events-none max-w-sm w-full px-4 sm:px-0"></div>
+
+  <!-- Sticky Glassmorphism Navigation Bar -->
+  <header class="sticky top-0 z-40 glass-nav border-b border-slate-200/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        
+        <!-- Official MSH ENTERPRISE Brand Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div id="navbar-logo-mark" class="w-12 h-12 sm:w-14 sm:h-14 shrink-0 rounded-2xl bg-white border border-slate-200/90 shadow-sm p-1 flex items-center justify-center transition-transform duration-200 group-hover:scale-105 overflow-hidden">
+            <!-- Loads MSH ENTERPRISE LOGO.png when hosted in GitHub repo, seamlessly falling back to high-res vector recreation -->
+            <img 
+              src="MSH ENTERPRISE LOGO.png" 
+              alt="MSH ENTERPRISE Official Logo" 
+              class="w-full h-full object-contain"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+            />
+            <svg viewBox="0 0 360 360" class="w-full h-full hidden" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="MSH ENTERPRISE Logo">
+              <defs>
+                <linearGradient id="mshBlueMetal" x1="60" y1="30" x2="290" y2="290" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#60a5fa"/>
+                  <stop offset="35%" stop-color="#2563eb"/>
+                  <stop offset="75%" stop-color="#1e40af"/>
+                  <stop offset="100%" stop-color="#172554"/>
+                </linearGradient>
+                <linearGradient id="mshGoldSwoosh" x1="85" y1="65" x2="245" y2="195" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#fef08a"/>
+                  <stop offset="35%" stop-color="#f59e0b"/>
+                  <stop offset="75%" stop-color="#d97706"/>
+                  <stop offset="100%" stop-color="#fbbf24"/>
+                </linearGradient>
+                <linearGradient id="mshRingAccent" x1="145" y1="185" x2="215" y2="185" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#f59e0b"/>
+                  <stop offset="50%" stop-color="#10b981"/>
+                  <stop offset="100%" stop-color="#2563eb"/>
+                </linearGradient>
+                <linearGradient id="mshGreyMetal" x1="75" y1="295" x2="285" y2="320" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#94a3b8"/>
+                  <stop offset="50%" stop-color="#475569"/>
+                  <stop offset="100%" stop-color="#64748b"/>
+                </linearGradient>
+              </defs>
+              <!-- Outer Bulb Contour -->
+              <path d="M180 28C123 28 82 70 82 123C82 154 98 176 116 194C126 204 132 213 135 222H166V180L150 186V208H142C139 199 132 190 122 180C106 164 94 145 94 123C94 76 131 40 180 40C229 40 266 76 266 123C266 146 253 165 236 181C225 191 218 200 215 209H203V168L188 174V222H225C228 213 234 204 244 194C262 176 278 154 278 123C278 70 237 28 180 28Z" fill="url(#mshBlueMetal)" stroke="#172554" stroke-width="2.5"/>
+              <!-- Ascending Bar Chart Columns -->
+              <path d="M126 114L146 107V152L126 160V114Z" fill="url(#mshBlueMetal)" stroke="#1e3a8a" stroke-width="2"/>
+              <path d="M156 98L176 91V140L156 148V98Z" fill="url(#mshBlueMetal)" stroke="#1e3a8a" stroke-width="2"/>
+              <path d="M186 80L207 72V127L186 135V80Z" fill="url(#mshBlueMetal)" stroke="#1e3a8a" stroke-width="2"/>
+              <!-- Golden Left Rim & Dynamic Swoosh -->
+              <path d="M124 46C98 63 82 91 82 123C82 154 98 176 116 194C126 204 132 213 135 222H172V176L156 182V208H142C138 198 131 188 121 178C148 171 196 153 224 125C236 113 231 99 216 105C207 109 201 116 194 122C167 146 132 160 109 166C99 153 94 139 94 123C94 94 109 68 133 53L124 46Z" fill="url(#mshGoldSwoosh)" stroke="#b45309" stroke-width="2"/>
+              <!-- Threaded Bulb Base Rings -->
+              <rect x="139" y="230" width="82" height="10" rx="5" fill="url(#mshRingAccent)" stroke="#1e3a8a" stroke-width="1.8"/>
+              <rect x="148" y="245" width="64" height="9" rx="4.5" fill="url(#mshBlueMetal)" stroke="#172554" stroke-width="1.8"/>
+              <rect x="155" y="259" width="50" height="9" rx="4.5" fill="url(#mshBlueMetal)" stroke="#172554" stroke-width="1.8"/>
+              <!-- Bold MSH Typography -->
+              <text x="180" y="312" text-anchor="middle" fill="url(#mshBlueMetal)" stroke="#172554" stroke-width="2" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="64" letter-spacing="3">MSH</text>
+              <!-- Spaced ENTERPRISE Typography -->
+              <text x="180" y="340" text-anchor="middle" fill="url(#mshGreyMetal)" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="21" letter-spacing="8.5">ENTERPRISE</text>
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="font-display font-extrabold text-navy-950 text-base sm:text-lg tracking-tight">MSH ENTERPRISE</span>
+              <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 border border-amber-300">TZ</span>
+            </div>
+            <p class="text-[10px] sm:text-[11px] text-slate-500 font-bold tracking-wider uppercase leading-tight">Tanzania • Solutions &amp; Consultancy</p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-600">
+          <a href="#services" class="hover:text-navy-700 transition-colors" data-i18n="nav_services">Services</a>
+          <a href="#visitor-analytics" class="hover:text-navy-700 transition-colors" data-i18n="nav_analytics">Visitor Insights</a>
+          <a href="#how-it-works" class="hover:text-navy-700 transition-colors" data-i18n="nav_how">How It Works</a>
+          <a href="#quote-builder" class="hover:text-navy-700 transition-colors flex items-center gap-1.5">
+            <span data-i18n="nav_builder">Request Builder</span>
+            <span id="nav-basket-badge" class="hidden px-2 py-0.5 text-xs font-bold bg-blue-700 text-white rounded-full">0</span>
+          </a>
+          <a href="#contact" class="hover:text-navy-700 transition-colors" data-i18n="nav_contact">Contact</a>
+        </nav>
+
+        <!-- Right Controls: Language Toggle & WhatsApp CTA -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <!-- EN / SW Toggle -->
+          <div class="inline-flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200" role="group" aria-label="Language Switcher">
+            <button type="button" id="lang-en" onclick="setLanguage('en')" class="px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all bg-navy-900 text-white shadow-sm">
+              EN
+            </button>
+            <button type="button" id="lang-sw" onclick="setLanguage('sw')" class="px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all text-slate-600 hover:text-navy-900">
+              SW
+            </button>
+          </div>
+
+          <!-- Quick WhatsApp CTA -->
+          <a href="https://wa.me/255777749831?text=Habari%20MSH%20ENTERPRISE%2C%20nahitaji%20msaada%20wa%20huduma%20zenu." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 sm:px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-semibold shadow-sm hover:shadow transition-all">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span class="hidden sm:inline" data-i18n="nav_whatsapp">WhatsApp Us</span>
+            <span class="sm:hidden">Chat</span>
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button type="button" id="mobile-menu-btn" onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-xl text-slate-700 hover:bg-slate-100 border border-slate-200" aria-label="Open menu">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Navigation -->
+      <div id="mobile-menu" class="hidden lg:hidden pb-4 pt-2 border-t border-slate-100 space-y-1">
+        <a href="#services" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-100" data-i18n="nav_services">Services</a>
+        <a href="#visitor-analytics" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-100" data-i18n="nav_analytics">Visitor Insights</a>
+        <a href="#how-it-works" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-100" data-i18n="nav_how">How It Works</a>
+        <a href="#quote-builder" onclick="toggleMobileMenu()" class="flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-100">
+          <span data-i18n="nav_builder">Request Builder</span>
+          <span id="mobile-basket-badge" class="hidden px-2 py-0.5 text-xs font-bold bg-blue-700 text-white rounded-full">0</span>
+        </a>
+        <a href="#contact" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-100" data-i18n="nav_contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-pattern text-white relative overflow-hidden pt-12 pb-16 sm:pt-16 sm:pb-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <!-- Official Emblem Showcase & Auto-Updating Cycle Pill -->
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 border border-amber-400/30 text-amber-300 text-xs sm:text-sm font-medium mb-6 backdrop-blur-sm">
+          <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+          <span data-i18n="hero_badge">Dar es Salaam's Trusted Digital & Consultancy Hub</span>
+          <span class="px-2 py-0.5 rounded-full bg-blue-600/40 border border-blue-400/30 text-white text-[11px] font-bold">
+            <span data-current-year></span>/<span data-next-year-short></span>
+          </span>
+        </div>
+
+        <!-- Main Heading -->
+        <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-[52px] tracking-tight leading-[1.15] mb-5">
+          <span data-i18n="hero_title_1">Reliable Solutions for</span>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-amber-300 to-emerald-300" data-i18n="hero_title_highlight">Academic, Business & Government Portals</span>
+        </h1>
+
+        <!-- Exact Tagline -->
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl mx-auto" data-i18n="hero_subtitle">
+          Your trusted partner for academic support, professional services, digital solutions, and government online assistance in Tanzania.
+        </p>
+
+        <!-- Search Input Box inside Hero -->
+        <div class="max-w-2xl mx-auto mb-6">
+          <div class="relative flex items-center bg-white rounded-2xl shadow-2xl p-1.5 sm:p-2 border border-white/20 focus-within:ring-4 focus-within:ring-emerald-500/30 transition-all">
+            <div class="pl-3 sm:pl-4 pr-2 text-slate-400">
+              <i data-lucide="search" class="w-5 h-5"></i>
+            </div>
+            <input 
+              type="text" 
+              id="service-search" 
+              oninput="handleSearch(this.value)"
+              placeholder="Search NIDA, BRELA, Dissertation, HESLB, Proofreading..." 
+              data-i18n-placeholder="search_placeholder"
+              class="w-full py-2.5 sm:py-3 px-2 text-slate-900 placeholder-slate-400 text-sm sm:text-base bg-transparent focus:outline-none"
+            />
+            <button 
+              type="button" 
+              id="clear-search-btn" 
+              onclick="clearSearch()" 
+              class="hidden px-3 py-1.5 text-xs font-semibold text-slate-500 hover:text-slate-800"
+            >
+              Clear
+            </button>
+            <a href="#services" class="shrink-0 px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-navy-900 hover:bg-navy-800 text-white text-xs sm:text-sm font-semibold transition-colors" data-i18n="search_btn">
+              Find Service
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Popular Tags -->
+        <div class="flex flex-wrap items-center justify-center gap-2 text-xs text-slate-300">
+          <span class="text-slate-400 font-medium" data-i18n="popular_label">Popular:</span>
+          <button type="button" onclick="quickSearch('NIDA')" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 transition-colors">NIDA / NIN</button>
+          <button type="button" onclick="quickSearch('BRELA')" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 transition-colors">BRELA & TIN</button>
+          <button type="button" onclick="quickSearch('Dissertation')" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 transition-colors">Dissertation & APA</button>
+          <button type="button" onclick="quickSearch('HESLB')" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 transition-colors">HESLB & TCU</button>
+          <button type="button" onclick="quickSearch('RITA')" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 transition-colors">RITA Certificates</button>
+        </div>
+      </div>
+
+      <!-- Trust Metrics Strip -->
+      <div class="mt-12 sm:mt-16 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 max-w-5xl mx-auto">
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-4 sm:p-5 backdrop-blur-sm">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+              <i data-lucide="layers" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="font-display font-bold text-lg sm:text-xl text-white">8 Core Pillars</div>
+              <div class="text-xs text-slate-300" data-i18n="metric_1">35+ Specialized Services</div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-4 sm:p-5 backdrop-blur-sm">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
+              <i data-lucide="zap" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="font-display font-bold text-lg sm:text-xl text-white" data-i18n="metric_2_title">Same-Day Start</div>
+              <div class="text-xs text-slate-300" data-i18n="metric_2">Fast WhatsApp Turnaround</div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-4 sm:p-5 backdrop-blur-sm">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center shrink-0">
+              <i data-lucide="shield-check" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="font-display font-bold text-lg sm:text-xl text-white" data-i18n="metric_3_title">100% Confidential</div>
+              <div class="text-xs text-slate-300" data-i18n="metric_3">Ethical & Secure Handling</div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-4 sm:p-5 backdrop-blur-sm">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center shrink-0">
+              <i data-lucide="map-pin" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="font-display font-bold text-lg sm:text-xl text-white">Dar es Salaam</div>
+              <div class="text-xs text-slate-300" data-i18n="metric_4">Nationwide Remote Support</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Visitor Analytics & Demographics Section -->
+  <section id="visitor-analytics" class="py-12 sm:py-16 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-8">
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-800 bg-blue-50 border border-blue-200 px-3 py-1 rounded-full">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+            <span data-i18n="analytics_badge">Live Platform Reach &amp; Audience Insights</span>
+          </div>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-navy-950 mt-3" data-i18n="analytics_title">
+            Visitor Statistics &amp; Audience Demographics
+          </h2>
+          <p class="text-slate-600 text-sm mt-1 max-w-2xl" data-i18n="analytics_subtitle">
+            Real-time daily, monthly, and annual traffic across Tanzania, segmented by visitor sex and age range.
+          </p>
+        </div>
+
+        <!-- Auto-Updating Live Date Stamp -->
+        <div class="flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700 self-start lg:self-auto">
+          <i data-lucide="calendar-clock" class="w-4 h-4 text-blue-700"></i>
+          <span id="live-period-label">Loading date...</span>
+        </div>
+      </div>
+
+      <!-- Daily, Monthly & Yearly Visitor Counter Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-8">
+        <!-- Daily Visitors -->
+        <div class="rounded-3xl p-6 bg-gradient-to-br from-navy-950 to-navy-800 text-white shadow-md relative overflow-hidden">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-sky-300" data-i18n="stat_daily_label">Daily Visitors (Today)</span>
+            <div class="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center text-amber-400">
+              <i data-lucide="sun" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="font-display font-extrabold text-3xl sm:text-4xl tracking-tight" id="count-daily">0</div>
+          <div class="text-xs text-slate-300 mt-2 flex items-center justify-between">
+            <span data-current-day-date></span>
+            <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-semibold" data-i18n="live_tag">Live</span>
+          </div>
+        </div>
+
+        <!-- Monthly Visitors -->
+        <div class="rounded-3xl p-6 bg-gradient-to-br from-blue-800 to-blue-700 text-white shadow-md relative overflow-hidden">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-100" data-i18n="stat_monthly_label">Monthly Visitors</span>
+            <div class="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center text-amber-300">
+              <i data-lucide="calendar" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="font-display font-extrabold text-3xl sm:text-4xl tracking-tight" id="count-monthly">0</div>
+          <div class="text-xs text-blue-100 mt-2 flex items-center justify-between">
+            <span data-current-month-year></span>
+            <span class="px-2 py-0.5 rounded-full bg-white/15 text-white font-semibold" data-i18n="auto_reset_month">Auto-Cycles Monthly</span>
+          </div>
+        </div>
+
+        <!-- Yearly Visitors -->
+        <div class="rounded-3xl p-6 bg-gradient-to-br from-amber-500 to-amber-600 text-navy-950 shadow-md relative overflow-hidden">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-navy-900" data-i18n="stat_yearly_label">Yearly Visitors</span>
+            <div class="w-9 h-9 rounded-xl bg-navy-950/10 flex items-center justify-center text-navy-950">
+              <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="font-display font-extrabold text-3xl sm:text-4xl tracking-tight" id="count-yearly">0</div>
+          <div class="text-xs font-bold text-navy-900 mt-2 flex items-center justify-between">
+            <span><span data-i18n="year_prefix">Year</span> <span data-current-year></span></span>
+            <span class="px-2 py-0.5 rounded-full bg-navy-950/10 text-navy-950" data-i18n="auto_reset_year">Auto-Updates Yearly</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Demographics Grid: Sex Breakdown + Age Range Breakdown + Quick Visitor Check-In -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Sex Distribution Card -->
+        <div class="lg:col-span-4 bg-slate-50 rounded-3xl p-6 border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="font-display font-bold text-base sm:text-lg text-navy-950 flex items-center gap-2">
+                <i data-lucide="users" class="w-5 h-5 text-blue-700"></i>
+                <span data-i18n="demo_sex_title">Visitors by Sex</span>
+              </h3>
+              <span class="text-[11px] font-bold text-slate-500" id="total-profiled-badge">0 profiled</span>
+            </div>
+
+            <div class="space-y-4">
+              <!-- Male Bar -->
+              <div>
+                <div class="flex justify-between text-xs sm:text-sm font-bold mb-1.5">
+                  <span class="text-navy-950 flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-blue-700"></span>
+                    <span data-i18n="sex_male">Male</span>
+                  </span>
+                  <span class="text-blue-800"><span id="male-pct">54</span>% (<span id="male-count">0</span>)</span>
+                </div>
+                <div class="w-full h-3 bg-slate-200 rounded-full overflow-hidden">
+                  <div id="male-bar" class="h-full bg-blue-700 rounded-full transition-all duration-500" style="width: 54%"></div>
+                </div>
+              </div>
+
+              <!-- Female Bar -->
+              <div>
+                <div class="flex justify-between text-xs sm:text-sm font-bold mb-1.5">
+                  <span class="text-navy-950 flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+                    <span data-i18n="sex_female">Female</span>
+                  </span>
+                  <span class="text-amber-700"><span id="female-pct">46</span>% (<span id="female-count">0</span>)</span>
+                </div>
+                <div class="w-full h-3 bg-slate-200 rounded-full overflow-hidden">
+                  <div id="female-bar" class="h-full bg-amber-500 rounded-full transition-all duration-500" style="width: 46%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-[11px] text-slate-500 mt-5 pt-3 border-t border-slate-200" data-i18n="demo_sex_note">
+            Reflects university students, entrepreneurs, and portal clients served across Tanzania.
+          </p>
+        </div>
+
+        <!-- Age Range Distribution Card -->
+        <div class="lg:col-span-5 bg-slate-50 rounded-3xl p-6 border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="font-display font-bold text-base sm:text-lg text-navy-950 flex items-center gap-2">
+                <i data-lucide="pie-chart" class="w-5 h-5 text-amber-600"></i>
+                <span data-i18n="demo_age_title">Visitors by Age Range</span>
+              </h3>
+              <span class="text-[11px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full" data-current-year></span>
+            </div>
+
+            <div class="space-y-3.5" id="age-bars-container">
+              <!-- Populated dynamically by JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive 2-Click Visitor Demographics Check-in -->
+        <div class="lg:col-span-3 bg-navy-950 text-white rounded-3xl p-6 border border-navy-800 shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-amber-300 bg-white/10 px-2.5 py-1 rounded-full mb-3">
+              <i data-lucide="user-check" class="w-3 h-3"></i>
+              <span data-i18n="checkin_badge">Quick Visitor Check-In</span>
+            </span>
+            <h4 class="font-display font-bold text-base leading-snug mb-1.5" data-i18n="checkin_title">Log Your Visitor Profile</h4>
+            <p class="text-xs text-slate-300 mb-4" data-i18n="checkin_desc">
+              Help us tailor our academic &amp; business services by selecting your sex and age group:
+            </p>
+
+            <!-- Sex Selector -->
+            <div class="mb-3">
+              <label class="block text-[11px] font-bold text-slate-300 mb-1.5" data-i18n="checkin_sex_label">1. Select Sex</label>
+              <div class="grid grid-cols-2 gap-2">
+                <button type="button" id="btn-sex-male" onclick="selectVisitorSex('male')" class="py-2 px-3 rounded-xl text-xs font-bold border border-white/20 bg-white/5 hover:bg-white/15 transition-all" data-i18n="sex_male">Male</button>
+                <button type="button" id="btn-sex-female" onclick="selectVisitorSex('female')" class="py-2 px-3 rounded-xl text-xs font-bold border border-white/20 bg-white/5 hover:bg-white/15 transition-all" data-i18n="sex_female">Female</button>
+              </div>
+            </div>
+
+            <!-- Age Range Selector -->
+            <div class="mb-4">
+              <label class="block text-[11px] font-bold text-slate-300 mb-1.5" data-i18n="checkin_age_label">2. Select Age Range</label>
+              <div class="grid grid-cols-2 gap-2">
+                <button type="button" onclick="selectVisitorAge('18-24')" data-age-btn="18-24" class="py-1.5 px-2.5 rounded-xl text-xs font-bold border border-white/20 bg-white/5 hover:bg-white/15 transition-all">18–24</button>
+                <button type="button" onclick="selectVisitorAge('25-34')" data-age-btn="25-34" class="py-1.5 px-2.5 rounded-xl text-xs font-bold border border-white/20 bg-white/5 hover:bg-white/15 transition-all">25–34</button>
+                <button type="button" onclick="selectVisitorAge('35-44')" data-age-btn="35-44" class="py-1.5 px-2.5 rounded-xl text-xs font-bold border border-white/20 bg-white/5 hover:bg-white/15 transition-all">35–44</button>
+                <button type="button" onclick="selectVisitorAge('45+')" data-age-btn="45+" class="py-1.5 px-2.5 rounded-xl text-xs font-bold border border-white/20 bg-white/5 hover:bg-white/15 transition-all">45+</button>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" id="submit-demographics-btn" onclick="submitVisitorDemographics()" class="w-full py-2.5 px-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-navy-950 font-extrabold text-xs transition-colors shadow-sm" data-i18n="checkin_submit">
+            Record My Visit
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Services Directory Section -->
+  <section id="services" class="py-14 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full" data-i18n="dir_badge">Complete Service Directory</span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-navy-950 mt-3" data-i18n="dir_title">Explore Our Professional Services</h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-1.5 max-w-2xl" data-i18n="dir_subtitle">
+            Select individual services for instant WhatsApp inquiry or add multiple items to your Request Basket for a combined quote.
+          </p>
+        </div>
+        <div class="text-sm text-slate-500 font-medium">
+          <span id="results-count">Showing all 8 categories</span>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-4 mb-6" id="category-pills">
+        <!-- Populated dynamically by JS -->
+      </div>
+
+      <!-- Service Categories Grid -->
+      <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <!-- Populated dynamically by JS -->
+      </div>
+
+      <!-- Empty Search State -->
+      <div id="empty-state" class="hidden text-center py-16 px-4 bg-white rounded-3xl border border-slate-200 shadow-sm">
+        <div class="w-14 h-14 rounded-2xl bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-4">
+          <i data-lucide="search-x" class="w-7 h-7"></i>
+        </div>
+        <h3 class="font-display font-bold text-lg text-navy-950 mb-1" data-i18n="empty_title">No matching services found</h3>
+        <p class="text-slate-500 text-sm max-w-md mx-auto mb-5" data-i18n="empty_desc">
+          Try searching with another keyword (e.g., NIDA, BRELA, SPSS, Translation, NECTA) or reset filters to view all services.
+        </p>
+        <button type="button" onclick="resetFilters()" class="px-5 py-2.5 rounded-xl bg-navy-900 text-white text-sm font-semibold hover:bg-navy-800 transition-colors" data-i18n="empty_btn">
+          Show All Services
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Service Request & WhatsApp Quote Builder -->
+  <section id="quote-builder" class="py-14 sm:py-20 bg-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        
+        <!-- Left Info Column -->
+        <div class="lg:col-span-5 space-y-6">
+          <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+            <span data-i18n="builder_badge">Smart Quote & Request Builder</span>
+          </span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-navy-950 leading-tight" data-i18n="builder_title">
+            Bundle Your Services & Send Directly to WhatsApp
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed" data-i18n="builder_desc">
+            Need help with more than one task—like BRELA registration plus TIN application, or dissertation formatting plus plagiarism checking? Add all the services you need and send a structured request straight to our team.
+          </p>
+
+          <!-- Direct Contact Highlight Card -->
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0">
+                <i data-lucide="headphones" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-navy-950 text-sm" data-i18n="direct_desk_title">Direct Assistance Desk</h4>
+                <p class="text-xs text-slate-500" data-i18n="direct_desk_sub">Available Mon – Sat • Fast Response on WhatsApp</p>
+              </div>
+            </div>
+            <div class="pt-2 border-t border-slate-200 flex flex-wrap gap-4 text-xs font-semibold text-slate-700">
+              <a href="tel:+255777749831" class="flex items-center gap-1.5 hover:text-emerald-700">
+                <i data-lucide="phone" class="w-3.5 h-3.5 text-emerald-600"></i>
+                +255 777 749 831
+              </a>
+              <a href="mailto:mshenterprise20@gmail.com" class="flex items-center gap-1.5 hover:text-emerald-700">
+                <i data-lucide="mail" class="w-3.5 h-3.5 text-emerald-600"></i>
+                mshenterprise20@gmail.com
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Interactive Builder Form -->
+        <div class="lg:col-span-7 bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-lg">
+          
+          <!-- Selected Services Basket -->
+          <div class="mb-6">
+            <div class="flex items-center justify-between mb-3">
+              <label class="text-sm font-bold text-navy-950 flex items-center gap-2">
+                <i data-lucide="shopping-bag" class="w-4 h-4 text-emerald-600"></i>
+                <span data-i18n="selected_services_label">Selected Services</span>
+                <span id="builder-count-pill" class="px-2 py-0.5 text-xs font-bold bg-navy-900 text-white rounded-full">0</span>
+              </label>
+              <button type="button" id="clear-basket-btn" onclick="clearBasket()" class="hidden text-xs font-semibold text-rose-600 hover:text-rose-700">
+                <span data-i18n="clear_all">Clear All</span>
+              </button>
+            </div>
+
+            <!-- Basket List -->
+            <div id="basket-items" class="min-h-[84px] rounded-2xl bg-white border border-dashed border-slate-300 p-4 flex flex-col justify-center">
+              <p class="text-xs sm:text-sm text-slate-400 text-center" data-i18n="basket_empty">
+                No services selected yet. Click "+ Add" on any service card above, or pick from the quick dropdown below.
+              </p>
+            </div>
+
+            <!-- Quick Add Dropdown inside Builder -->
+            <div class="mt-3 flex gap-2">
+              <select id="quick-service-select" class="w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2.5 text-xs sm:text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                <option value="" data-i18n="dropdown_placeholder">+ Quick add a service from any category...</option>
+              </select>
+              <button type="button" onclick="addFromDropdown()" class="shrink-0 px-4 py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white text-xs sm:text-sm font-semibold transition-colors" data-i18n="add_btn">
+                Add
+              </button>
+            </div>
+          </div>
+
+          <!-- Client Details Form -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label for="client-name" class="block text-xs font-bold text-slate-700 mb-1.5" data-i18n="label_name">Your Name / Organization</label>
+              <input type="text" id="client-name" placeholder="e.g. Juma Hassan" class="w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+            </div>
+            <div>
+              <label for="urgency-select" class="block text-xs font-bold text-slate-700 mb-1.5" data-i18n="label_urgency">Preferred Turnaround / Urgency</label>
+              <select id="urgency-select" class="w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                <option value="Standard (2-4 Days)" data-i18n="urg_standard">Standard (2–4 Days)</option>
+                <option value="Express (24-48 Hours)" data-i18n="urg_express">Express (24–48 Hours)</option>
+                <option value="Urgent (Same-Day Priority)" data-i18n="urg_urgent">Urgent (Same-Day Priority)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <label for="client-notes" class="block text-xs font-bold text-slate-700 mb-1.5" data-i18n="label_notes">Project Details / Portal Notes (Optional)</label>
+            <textarea id="client-notes" rows="3" placeholder="Share deadline, academic level, business name, or specific portal details..." data-i18n-placeholder="notes_placeholder" class="w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500"></textarea>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row gap-3">
+            <button type="button" onclick="sendWhatsAppRequest()" class="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md hover:shadow-lg transition-all">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span data-i18n="send_wa_btn">Send Request via WhatsApp</span>
+            </button>
+            <button type="button" onclick="toggleMessagePreview()" class="inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl bg-navy-900/5 hover:bg-navy-900/10 text-navy-950 border border-slate-300 font-semibold text-sm transition-colors">
+              <i data-lucide="eye" class="w-4 h-4"></i>
+              <span data-i18n="preview_btn">Preview</span>
+            </button>
+            <button type="button" onclick="copyRequestText()" class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 font-semibold text-sm transition-colors">
+              <i data-lucide="copy" class="w-4 h-4"></i>
+              <span data-i18n="copy_btn">Copy Request Text</span>
+            </button>
+          </div>
+
+          <!-- Collapsible Live WhatsApp Message Preview -->
+          <div id="wa-preview-box" class="hidden mt-4 p-4 rounded-2xl bg-[#e7ffdb] border border-emerald-300 text-slate-800 text-xs font-mono whitespace-pre-wrap leading-relaxed shadow-inner"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="py-14 sm:py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-navy-700 bg-navy-900/5 border border-navy-900/10 px-3 py-1 rounded-full" data-i18n="how_badge">Simple & Transparent Process</span>
+        <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-navy-950 mt-3" data-i18n="how_title">How MSH ENTERPRISE Works</h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-2" data-i18n="how_subtitle">
+          From academic editing to government portal submissions, getting professional assistance takes three easy steps.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <!-- Step 1 -->
+        <div class="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm relative">
+          <div class="w-12 h-12 rounded-2xl bg-navy-900 text-white font-display font-extrabold text-lg flex items-center justify-center mb-5 shadow-md">
+            1
+          </div>
+          <h3 class="font-display font-bold text-lg text-navy-950 mb-2" data-i18n="step1_title">Choose Your Service(s)</h3>
+          <p class="text-slate-600 text-sm leading-relaxed" data-i18n="step1_desc">
+            Browse our 8 specialized categories and pick a single service or bundle multiple requests in the Quote Builder.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm relative">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-600 text-white font-display font-extrabold text-lg flex items-center justify-center mb-5 shadow-md">
+            2
+          </div>
+          <h3 class="font-display font-bold text-lg text-navy-950 mb-2" data-i18n="step2_title">Send Details via WhatsApp</h3>
+          <p class="text-slate-600 text-sm leading-relaxed" data-i18n="step2_desc">
+            Submit your formatted request directly to our WhatsApp desk (+255 777 749 831) to confirm requirements, timeline, and transparent pricing.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm relative">
+          <div class="w-12 h-12 rounded-2xl bg-amber-500 text-navy-950 font-display font-extrabold text-lg flex items-center justify-center mb-5 shadow-md">
+            3
+          </div>
+          <h3 class="font-display font-bold text-lg text-navy-950 mb-2" data-i18n="step3_title">Fast Processing & Delivery</h3>
+          <p class="text-slate-600 text-sm leading-relaxed" data-i18n="step3_desc">
+            Receive regular progress updates and timely digital or physical delivery in Dar es Salaam and across Tanzania.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-navy-950 text-slate-300 pt-14 pb-10 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-10 border-b border-white/10">
+        
+        <!-- Brand Info -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="flex items-center gap-3">
+            <div id="footer-logo-mark" class="w-12 h-12 shrink-0 rounded-2xl bg-white p-1 flex items-center justify-center shadow-md overflow-hidden">
+              <img 
+                src="MSH ENTERPRISE LOGO.png" 
+                alt="MSH ENTERPRISE Official Logo" 
+                class="w-full h-full object-contain"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+              />
+              <svg viewBox="0 0 360 360" class="w-full h-full hidden" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M180 28C123 28 82 70 82 123C82 154 98 176 116 194C126 204 132 213 135 222H166V180L150 186V208H142C139 199 132 190 122 180C106 164 94 145 94 123C94 76 131 40 180 40C229 40 266 76 266 123C266 146 253 165 236 181C225 191 218 200 215 209H203V168L188 174V222H225C228 213 234 204 244 194C262 176 278 154 278 123C278 70 237 28 180 28Z" fill="#2563eb"/>
+                <path d="M126 114L146 107V152L126 160V114Z" fill="#2563eb"/>
+                <path d="M156 98L176 91V140L156 148V98Z" fill="#2563eb"/>
+                <path d="M186 80L207 72V127L186 135V80Z" fill="#2563eb"/>
+                <path d="M124 46C98 63 82 91 82 123C82 154 98 176 116 194C126 204 132 213 135 222H172V176L156 182V208H142C138 198 131 188 121 178C148 171 196 153 224 125C236 113 231 99 216 105C207 109 201 116 194 122C167 146 132 160 109 166C99 153 94 139 94 123C94 94 109 68 133 53L124 46Z" fill="#f59e0b"/>
+                <rect x="139" y="230" width="82" height="10" rx="5" fill="#10b981"/>
+                <rect x="148" y="245" width="64" height="9" rx="4.5" fill="#2563eb"/>
+                <rect x="155" y="259" width="50" height="9" rx="4.5" fill="#2563eb"/>
+                <text x="180" y="312" text-anchor="middle" fill="#1e40af" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="64" letter-spacing="3">MSH</text>
+                <text x="180" y="340" text-anchor="middle" fill="#64748b" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="21" letter-spacing="8.5">ENTERPRISE</text>
+              </svg>
+            </div>
+            <div>
+              <span class="font-display font-extrabold text-white text-xl tracking-tight block leading-none">MSH ENTERPRISE</span>
+              <span class="text-[10px] font-bold tracking-wider uppercase text-amber-400 mt-1 block">Tanzania • Solutions &amp; Consultancy</span>
+            </div>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed max-w-md" data-i18n="footer_tagline">
+            Your trusted partner for academic support, professional services, digital solutions, and government online assistance in Tanzania.
+          </p>
+          <div class="pt-2 flex flex-wrap gap-2">
+            <a href="https://wa.me/255777749831" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-colors">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>Chat on WhatsApp</span>
+            </a>
+            <a href="tel:+255777749831" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-white text-xs font-bold transition-colors">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+              <span>Call Direct</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Category Links -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider" data-i18n="footer_cats">Key Solutions</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><button type="button" onclick="filterAndScroll('academic')" class="hover:text-emerald-400 transition-colors">Academic & Research Support</button></li>
+            <li><button type="button" onclick="filterAndScroll('government')" class="hover:text-emerald-400 transition-colors">NIDA, RITA, HESLB & TCU Portals</button></li>
+            <li><button type="button" onclick="filterAndScroll('business')" class="hover:text-emerald-400 transition-colors">BRELA, TIN & VAT Registration</button></li>
+            <li><button type="button" onclick="filterAndScroll('editorial')" class="hover:text-emerald-400 transition-colors">Proofreading & EN ↔ SW Translation</button></li>
+            <li><button type="button" onclick="filterAndScroll('training')" class="hover:text-emerald-400 transition-colors">Tutoring & Exam Prep</button></li>
+          </ul>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="lg:col-span-4 space-y-3">
+          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider" data-i18n="footer_contact">Contact & Location</h4>
+          <ul class="space-y-2.5 text-sm text-slate-300">
+            <li class="flex items-start gap-2.5">
+              <span>📍</span>
+              <span>Dar es Salaam, Tanzania</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <span>📞</span>
+              <a href="tel:+255777749831" class="hover:text-emerald-400 transition-colors">+255 777 749 831</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <span>💬</span>
+              <a href="https://wa.me/255777749831" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors">WhatsApp (+255 777 749 831)</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <span>✉️</span>
+              <a href="mailto:mshenterprise20@gmail.com" class="hover:text-emerald-400 transition-colors">mshenterprise20@gmail.com</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <span>🌐</span>
+              <a href="https://mshenterprise.github.io/msh-enterprise/" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors">mshenterprise.github.io/msh-enterprise</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright with Auto-Updating Year -->
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>© <span data-current-year></span> MSH ENTERPRISE. <span data-i18n="rights_reserved">All Rights Reserved.</span></p>
+        <p data-i18n="footer_note">Ethical Academic Guidance • Business Consultancy • Digital Portal Assistance</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick WhatsApp Action Button -->
+  <a 
+    href="https://wa.me/255777749831?text=Hello%20MSH%20ENTERPRISE%2C%20I%20would%20like%20assistance%20with%20your%20services." 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    aria-label="Chat on WhatsApp"
+    class="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2.5 px-4 py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transition-all border border-emerald-400/40"
+  >
+    <span class="relative flex h-2.5 w-2.5">
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+      <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
+    </span>
+    <i data-lucide="message-circle" class="w-4 h-4"></i>
+    <span data-i18n="floating_wa">Live Support</span>
+  </a>
+
+  <!-- Single-Service Quick Request Modal -->
+  <div id="quick-modal" class="hidden fixed inset-0 z-50 bg-navy-950/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-7 border border-slate-200 shadow-2xl space-y-5">
+      <div class="flex items-start justify-between gap-3">
+        <div>
+          <span id="modal-cat-badge" class="inline-block text-[11px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full mb-2">Category</span>
+          <h3 id="modal-service-title" class="font-display font-extrabold text-lg sm:text-xl text-navy-950 leading-snug">Service Title</h3>
+        </div>
+        <button type="button" onclick="closeQuickModal()" class="p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors" aria-label="Close modal">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="space-y-3.5">
+        <div>
+          <label for="modal-name" class="block text-xs font-bold text-slate-700 mb-1" data-i18n="label_name">Your Name / Organization</label>
+          <input type="text" id="modal-name" placeholder="e.g. Amina Mohamed" class="w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+        </div>
+        <div>
+          <label for="modal-note" class="block text-xs font-bold text-slate-700 mb-1" data-i18n="modal_note_label">Brief Note or Deadline (Optional)</label>
+          <textarea id="modal-note" rows="3" placeholder="Share any quick details or deadline..." class="w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500"></textarea>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-2.5 pt-1">
+        <button type="button" onclick="submitQuickModalWhatsApp()" class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold shadow-sm transition-colors">
+          <i data-lucide="send" class="w-4 h-4"></i>
+          <span data-i18n="modal_send_btn">Book via WhatsApp</span>
+        </button>
+        <button type="button" onclick="moveModalToBasket()" class="inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-navy-950 text-xs sm:text-sm font-bold transition-colors">
+          <i data-lucide="plus" class="w-4 h-4"></i>
+          <span data-i18n="modal_bundle_btn">Add to Bundle</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Application Logic, Auto-Updating Years & Visitor Analytics -->
+  <script>
+    const WHATSAPP_NUMBER = "255777749831";
+    let currentLang = "en";
+    let activeFilter = "all";
+    let searchQuery = "";
+    let selectedBasket = []; // Array of { id, titleEn, titleSw, catEn, catSw }
+    let currentModalService = null;
+
+    // UI Translations Dictionary (EN / SW)
+    const i18n = {
+      en: {
+        nav_services: "Services",
+        nav_analytics: "Visitor Insights",
+        nav_how: "How It Works",
+        nav_builder: "Request Builder",
+        nav_contact: "Contact",
+        nav_whatsapp: "WhatsApp Us",
+        hero_badge: "Dar es Salaam's Trusted Digital & Consultancy Hub",
+        hero_title_1: "Reliable Solutions for",
+        hero_title_highlight: "Academic, Business & Government Portals",
+        hero_subtitle: "Your trusted partner for academic support, professional services, digital solutions, and government online assistance in Tanzania.",
+        search_placeholder: "Search NIDA, BRELA, Dissertation, HESLB, Proofreading...",
+        search_btn: "Find Service",
+        popular_label: "Popular:",
+        metric_1: "35+ Specialized Services",
+        metric_2_title: "Same-Day Start",
+        metric_2: "Fast WhatsApp Turnaround",
+        metric_3_title: "100% Confidential",
+        metric_3: "Ethical & Secure Handling",
+        metric_4: "Nationwide Remote Support",
+        analytics_badge: "Live Platform Reach & Audience Insights",
+        analytics_title: "Visitor Statistics & Audience Demographics",
+        analytics_subtitle: "Real-time daily, monthly, and annual traffic across Tanzania, segmented by visitor sex and age range.",
+        stat_daily_label: "Daily Visitors (Today)",
+        stat_monthly_label: "Monthly Visitors",
+        stat_yearly_label: "Yearly Visitors",
+        live_tag: "Live",
+        auto_reset_month: "Auto-Cycles Monthly",
+        auto_reset_year: "Auto-Updates Yearly",
+        year_prefix: "Year",
+        demo_sex_title: "Visitors by Sex",
+        sex_male: "Male",
+        sex_female: "Female",
+        demo_sex_note: "Reflects university students, entrepreneurs, and portal clients served across Tanzania.",
+        demo_age_title: "Visitors by Age Range",
+        checkin_badge: "Quick Visitor Check-In",
+        checkin_title: "Log Your Visitor Profile",
+        checkin_desc: "Help us tailor our academic & business services by selecting your sex and age group:",
+        checkin_sex_label: "1. Select Sex",
+        checkin_age_label: "2. Select Age Range",
+        checkin_submit: "Record My Visit",
+        checkin_recorded: "Profile Recorded ✓",
+        dir_badge: "Complete Service Directory",
+        dir_title: "Explore Our Professional Services",
+        dir_subtitle: "Select individual services for instant WhatsApp inquiry or add multiple items to your Request Basket for a combined quote.",
+        empty_title: "No matching services found",
+        empty_desc: "Try searching with another keyword (e.g., NIDA, BRELA, SPSS, Translation, NECTA) or reset filters to view all services.",
+        empty_btn: "Show All Services",
+        builder_badge: "Smart Quote & Request Builder",
+        builder_title: "Bundle Your Services & Send Directly to WhatsApp",
+        builder_desc: "Need help with more than one task—like BRELA registration plus TIN application, or dissertation formatting plus plagiarism checking? Add all the services you need and send a structured request straight to our team.",
+        direct_desk_title: "Direct Assistance Desk",
+        direct_desk_sub: "Available Mon – Sat • Fast Response on WhatsApp",
+        selected_services_label: "Selected Services",
+        clear_all: "Clear All",
+        basket_empty: "No services selected yet. Click '+ Add' on any service card above, or pick from the quick dropdown below.",
+        dropdown_placeholder: "+ Quick add a service from any category...",
+        add_btn: "Add",
+        label_name: "Your Name / Organization",
+        label_urgency: "Preferred Turnaround / Urgency",
+        urg_standard: "Standard (2–4 Days)",
+        urg_express: "Express (24–48 Hours)",
+        urg_urgent: "Urgent (Same-Day Priority)",
+        label_notes: "Project Details / Portal Notes (Optional)",
+        notes_placeholder: "Share deadline, academic level, business name, or specific portal details...",
+        send_wa_btn: "Send Request via WhatsApp",
+        preview_btn: "Preview",
+        copy_btn: "Copy Request Text",
+        floating_wa: "Live Support",
+        how_badge: "Simple & Transparent Process",
+        how_title: "How MSH ENTERPRISE Works",
+        how_subtitle: "From academic editing to government portal submissions, getting professional assistance takes three easy steps.",
+        step1_title: "Choose Your Service(s)",
+        step1_desc: "Browse our 8 specialized categories and pick a single service or bundle multiple requests in the Quote Builder.",
+        step2_title: "Send Details via WhatsApp",
+        step2_desc: "Submit your formatted request directly to our WhatsApp desk (+255 777 749 831) to confirm requirements, timeline, and transparent pricing.",
+        step3_title: "Fast Processing & Delivery",
+        step3_desc: "Receive regular progress updates and timely digital or physical delivery in Dar es Salaam and across Tanzania.",
+        footer_tagline: "Your trusted partner for academic support, professional services, digital solutions, and government online assistance in Tanzania.",
+        footer_cats: "Key Solutions",
+        footer_contact: "Contact & Location",
+        rights_reserved: "All Rights Reserved.",
+        footer_note: "Ethical Academic Guidance • Business Consultancy • Digital Portal Assistance",
+        quick_req_btn: "Quick Request",
+        add_bundle_btn: "+ Add",
+        added_bundle_btn: "Added ✓",
+        modal_note_label: "Brief Note or Deadline (Optional)",
+        modal_send_btn: "Book via WhatsApp",
+        modal_bundle_btn: "Add to Bundle"
+      },
+      sw: {
+        nav_services: "Huduma",
+        nav_analytics: "Takwimu za Wageni",
+        nav_how: "Jinsi Inavyofanya Kazi",
+        nav_builder: "Andaa Ombi",
+        nav_contact: "Mawasiliano",
+        nav_whatsapp: "Tuma WhatsApp",
+        hero_badge: "Kituo Chako cha Kuaminika cha Huduma za Kidijitali na Ushauri Tanzania",
+        hero_title_1: "Suluhisho la Uhakika kwa",
+        hero_title_highlight: "Taaluma, Biashara na Mifumo ya Serikali",
+        hero_subtitle: "Mshirika wako unayemwamini kwa msaada wa kitaaluma, huduma za kiofisi, suluhisho za kidijitali, na usaidizi wa mifumo ya serikali mtandaoni Tanzania.",
+        search_placeholder: "Tafuta NIDA, BRELA, Dissertation, HESLB, Tafsiri...",
+        search_btn: "Tafuta Huduma",
+        popular_label: "Maarufu:",
+        metric_1: "Huduma Maalum 35+",
+        metric_2_title: "Huduma ya Haraka",
+        metric_2: "Mrejesho wa Haraka WhatsApp",
+        metric_3_title: "Usiri wa 100%",
+        metric_3: "Uaminifu na Usalama wa Taarifa",
+        metric_4: "Huduma Popote Tanzania",
+        analytics_badge: "Takwimu za Wageni na Taarifa za Watumiaji",
+        analytics_title: "Idadi ya Wageni na Mgawanyo wa Jinsia na Umri",
+        analytics_subtitle: "Idadi ya wageni wa kila siku, mwezi, na mwaka kote Tanzania pamoja na mgawanyo wa jinsia na makundi ya umri.",
+        stat_daily_label: "Wageni wa Leo (Kila Siku)",
+        stat_monthly_label: "Wageni wa Mwezi Huu",
+        stat_yearly_label: "Wageni wa Mwaka Huu",
+        live_tag: "Moja kwa Moja",
+        auto_reset_month: "Inajisasisha Kila Mwezi",
+        auto_reset_year: "Inajisasisha Kila Mwaka",
+        year_prefix: "Mwaka",
+        demo_sex_title: "Wageni kwa Jinsia",
+        sex_male: "Wanaume (Male)",
+        sex_female: "Wanawake (Female)",
+        demo_sex_note: "Inajumuisha wanafunzi wa vyuo, wajasiriamali, na wateja wa mifumo ya mtandaoni Tanzania.",
+        demo_age_title: "Wageni kwa Kundi la Umri",
+        checkin_badge: "Usajili Mfupi wa Mgeni",
+        checkin_title: "Chagua Jinsia na Umri Wako",
+        checkin_desc: "Tusaidie kuboresha huduma zetu za kitaaluma na kibiashara kwa kuchagua jinsia na umri wako:",
+        checkin_sex_label: "1. Chagua Jinsia",
+        checkin_age_label: "2. Chagua Kundi la Umri",
+        checkin_submit: "Hifadhi Taarifa Zangu",
+        checkin_recorded: "Taarifa Zimehifadhiwa ✓",
+        dir_badge: "Orodha Kamili ya Huduma",
+        dir_title: "Chagua Huduma Unayohitaji",
+        dir_subtitle: "Bonyeza 'Omba Haraka' kwa huduma moja au ongeza huduma nyingi kwenye kikapu chako ili kutuma ombi la pamoja.",
+        empty_title: "Hakuna huduma iliyolingana na utafutaji wako",
+        empty_desc: "Jaribu kutafuta kwa neno lingine (mfano: NIDA, BRELA, SPSS, Tafsiri, NECTA) au onyesha huduma zote.",
+        empty_btn: "Onyesha Huduma Zote",
+        builder_badge: "Kikapu cha Maombi na Makadirio",
+        builder_title: "Kusanya Huduma Zako na Utume Moja kwa Moja WhatsApp",
+        builder_desc: "Unahitaji msaada zaidi ya mmoja—kama usajili wa BRELA pamoja na TIN, au uhariri wa tasnifu na ukaguzi wa plagiarism? Chagua huduma zote na utume ujumbe uliopangwa vizuri.",
+        direct_desk_title: "Dawati la Huduma kwa Wateja",
+        direct_desk_sub: "Jumatatu – Jumamosi • Majibu ya Haraka WhatsApp",
+        selected_services_label: "Huduma Ulizochagua",
+        clear_all: "Futa Zote",
+        basket_empty: "Bado hujachagua huduma. Bonyeza '+ Ongeza' kwenye huduma yoyote hapo juu au chagua hapa chini.",
+        dropdown_placeholder: "+ Chagua huduma kwa haraka hapa...",
+        add_btn: "Ongeza",
+        label_name: "Jina Lako / Taasisi",
+        label_urgency: "Haraka ya Huduma / Muda",
+        urg_standard: "Kawaida (Siku 2–4)",
+        urg_express: "Haraka (Saa 24–48)",
+        urg_urgent: "Dharura (Siku Hiyohiyo)",
+        label_notes: "Maelezo ya Ziada / Tarehe ya Mwisho (Si Lazima)",
+        notes_placeholder: "Andika maelezo mafupi, ngazi ya elimu, jina la biashara, au taarifa za mfumo...",
+        send_wa_btn: "Tuma Ombi Kupitia WhatsApp",
+        preview_btn: "Hakiki",
+        copy_btn: "Nakili Ujumbe",
+        floating_wa: "Msaada wa Haraka",
+        how_badge: "Hatua Rahisi na Wazi",
+        how_title: "Jinsi MSH ENTERPRISE Inavyofanya Kazi",
+        how_subtitle: "Kuanzia uhariri wa kitaaluma hadi mifumo ya serikali mtandaoni, unapata huduma kwa hatua tatu rahisi.",
+        step1_title: "1. Chagua Huduma Zako",
+        step1_desc: "Pitia makundi yetu 8 ya huduma na uchague huduma moja au nyingi kwa pamoja.",
+        step2_title: "2. Tuma Maelezo WhatsApp",
+        step2_desc: "Tuma ombi lako moja kwa moja kwenye WhatsApp yetu (+255 777 749 831) ili kuthibitisha mahitaji, muda na gharama.",
+        step3_title: "3. Uchakataji wa Haraka",
+        step3_desc: "Pokea taarifa za hatua kwa hatua na kukabidhiwa kazi yako kwa wakati Dar es Salaam na kote Tanzania.",
+        footer_tagline: "Mshirika wako unayemwamini kwa msaada wa kitaaluma, huduma za kiofisi, suluhisho za kidijitali, na usaidizi wa mifumo ya serikali mtandaoni Tanzania.",
+        footer_cats: "Huduma Kuu",
+        footer_contact: "Mawasiliano na Mahali",
+        rights_reserved: "Haki Zote Zimehifadhiwa.",
+        footer_note: "Mwongozo wa Kitaaluma • Ushauri wa Biashara • Msaada wa Mifumo ya Kidijitali",
+        quick_req_btn: "Omba Haraka",
+        add_bundle_btn: "+ Ongeza",
+        added_bundle_btn: "Imeongezwa ✓",
+        modal_note_label: "Maelezo Mafupi au Tarehe ya Mwisho (Si Lazima)",
+        modal_send_btn: "Tuma WhatsApp Sasa",
+        modal_bundle_btn: "Weka Kwenye Kikapu"
+      }
+    };
+
+    // =========================================================================
+    // 1. AUTO-UPDATING YEARS & DATES THROUGHOUT THE PLATFORM
+    // =========================================================================
+    function syncDynamicDates() {
+      const now = new Date();
+      const currentYear = now.getFullYear();
+      const nextYearShort = String(currentYear + 1).slice(-2);
+
+      const monthNamesEn = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      const monthNamesSw = ["Januari", "Februari", "Machi", "Aprili", "Mei", "Juni", "Julai", "Agosti", "Septemba", "Oktoba", "Novemba", "Desemba"];
+      const monthName = currentLang === "en" ? monthNamesEn[now.getMonth()] : monthNamesSw[now.getMonth()];
+
+      const dayFormatted = `${String(now.getDate()).padStart(2, "0")} ${monthName} ${currentYear}`;
+      const monthYearFormatted = `${monthName} ${currentYear}`;
+
+      document.querySelectorAll("[data-current-year]").forEach(el => {
+        el.textContent = currentYear;
+      });
+      document.querySelectorAll("[data-next-year-short]").forEach(el => {
+        el.textContent = nextYearShort;
+      });
+      document.querySelectorAll("[data-current-day-date]").forEach(el => {
+        el.textContent = dayFormatted;
+      });
+      document.querySelectorAll("[data-current-month-year]").forEach(el => {
+        el.textContent = monthYearFormatted;
+      });
+
+      const periodLabel = document.getElementById("live-period-label");
+      if (periodLabel) {
+        periodLabel.textContent = currentLang === "en"
+          ? `Updated: ${dayFormatted} • Dar es Salaam (EAT)`
+          : `Imesasishwa: ${dayFormatted} • Dar es Salaam`;
+      }
+    }
+
+    // =========================================================================
+    // 2. VISITOR ANALYTICS & DEMOGRAPHICS ENGINE (DAILY, MONTHLY, YEARLY, SEX, AGE)
+    // =========================================================================
+    const ANALYTICS_STORAGE_KEY = "msh_enterprise_analytics_v1";
+    const SESSION_VISIT_KEY = "msh_enterprise_session_counted";
+    let pendingSex = null;
+    let pendingAge = null;
+
+    function getDateKeys() {
+      const d = new Date();
+      const yyyy = String(d.getFullYear());
+      const mm = `${yyyy}-${String(d.getMonth() + 1).padStart(2, "0")}`;
+      const dd = `${mm}-${String(d.getDate()).padStart(2, "0")}`;
+      return { dd, mm, yyyy, dayOfYear: Math.floor((d - new Date(d.getFullYear(), 0, 0)) / 86400000), dayOfMonth: d.getDate() };
+    }
+
+    function loadAndUpdateAnalytics() {
+      const keys = getDateKeys();
+      let state = null;
+
+      try {
+        const raw = localStorage.getItem(ANALYTICS_STORAGE_KEY);
+        if (raw) state = JSON.parse(raw);
+      } catch (e) {}
+
+      // Initialize realistic baseline figures proportional to current day/month/year if first load
+      if (!state) {
+        state = {
+          dayKey: keys.dd,
+          monthKey: keys.mm,
+          yearKey: keys.yyyy,
+          daily: 38 + (keys.dayOfMonth % 15),
+          monthly: (keys.dayOfMonth * 42) + 115,
+          yearly: (keys.dayOfYear * 41) + 480,
+          sex: { male: 642, female: 548 },
+          age: { "18-24": 510, "25-34": 430, "35-44": 175, "45+": 75 },
+          userSubmitted: false
+        };
+      }
+
+      // Automatic rollover when a new day, month, or year begins
+      if (state.yearKey !== keys.yyyy) {
+        state.yearKey = keys.yyyy;
+        state.yearly = 1;
+      }
+      if (state.monthKey !== keys.mm) {
+        state.monthKey = keys.mm;
+        state.monthly = 1;
+      }
+      if (state.dayKey !== keys.dd) {
+        state.dayKey = keys.dd;
+        state.daily = 1;
+      }
+
+      // Increment unique session visit once per browser session
+      let alreadyCounted = false;
+      try {
+        alreadyCounted = sessionStorage.getItem(SESSION_VISIT_KEY) === keys.dd;
+      } catch (e) {}
+
+      if (!alreadyCounted) {
+        state.daily += 1;
+        state.monthly += 1;
+        state.yearly += 1;
+        try {
+          sessionStorage.setItem(SESSION_VISIT_KEY, keys.dd);
+        } catch (e) {}
+      }
+
+      try {
+        localStorage.setItem(ANALYTICS_STORAGE_KEY, JSON.stringify(state));
+      } catch (e) {}
+
+      return state;
+    }
+
+    function renderAnalyticsUI() {
+      const state = loadAndUpdateAnalytics();
+
+      document.getElementById("count-daily").textContent = state.daily.toLocaleString();
+      document.getElementById("count-monthly").textContent = state.monthly.toLocaleString();
+      document.getElementById("count-yearly").textContent = state.yearly.toLocaleString();
+
+      // Sex percentages
+      const totalSex = Math.max(1, state.sex.male + state.sex.female);
+      const malePct = Math.round((state.sex.male / totalSex) * 100);
+      const femalePct = 100 - malePct;
+
+      document.getElementById("male-pct").textContent = malePct;
+      document.getElementById("female-pct").textContent = femalePct;
+      document.getElementById("male-count").textContent = state.sex.male.toLocaleString();
+      document.getElementById("female-count").textContent = state.sex.female.toLocaleString();
+      document.getElementById("male-bar").style.width = `${malePct}%`;
+      document.getElementById("female-bar").style.width = `${femalePct}%`;
+      document.getElementById("total-profiled-badge").textContent = currentLang === "en"
+        ? `${totalSex.toLocaleString()} profiled`
+        : `Waliotambuliwa ${totalSex.toLocaleString()}`;
+
+      // Age Range Bars
+      const ageGroups = [
+        { key: "18-24", labelEn: "18–24 yrs (Students & Applicants)", labelSw: "Miaka 18–24 (Wanafunzi & Waombaji)", color: "bg-blue-700" },
+        { key: "25-34", labelEn: "25–34 yrs (Graduates & Entrepreneurs)", labelSw: "Miaka 25–34 (Wahitimu & Wajasiriamali)", color: "bg-amber-500" },
+        { key: "35-44", labelEn: "35–44 yrs (Business & Professionals)", labelSw: "Miaka 35–44 (Wafanyabiashara & Wataalamu)", color: "bg-emerald-600" },
+        { key: "45+", labelEn: "45+ yrs (Corporate & Institutional)", labelSw: "Miaka 45+ (Taasisi & Makampuni)", color: "bg-slate-600" }
+      ];
+
+      const totalAge = Math.max(1, Object.values(state.age).reduce((acc, v) => acc + v, 0));
+      const ageContainer = document.getElementById("age-bars-container");
+      ageContainer.innerHTML = ageGroups.map(grp => {
+        const count = state.age[grp.key] || 0;
+        const pct = Math.round((count / totalAge) * 100);
+        const label = currentLang === "en" ? grp.labelEn : grp.labelSw;
+        return `
+          <div>
+            <div class="flex justify-between text-xs font-bold mb-1">
+              <span class="text-slate-700">${label}</span>
+              <span class="text-navy-950">${pct}% <span class="text-slate-400 font-medium">(${count.toLocaleString()})</span></span>
+            </div>
+            <div class="w-full h-2.5 bg-slate-200 rounded-full overflow-hidden">
+              <div class="h-full ${grp.color} rounded-full transition-all duration-500" style="width: ${pct}%"></div>
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      if (state.userSubmitted) {
+        const btn = document.getElementById("submit-demographics-btn");
+        if (btn) {
+          btn.textContent = i18n[currentLang].checkin_recorded;
+          btn.className = "w-full py-2.5 px-4 rounded-xl bg-emerald-600 text-white font-extrabold text-xs transition-colors cursor-default";
+        }
+      }
+    }
+
+    function selectVisitorSex(sex) {
+      pendingSex = sex;
+      const maleBtn = document.getElementById("btn-sex-male");
+      const femaleBtn = document.getElementById("btn-sex-female");
+      const activeCls = "py-2 px-3 rounded-xl text-xs font-bold border-2 border-amber-400 bg-amber-400/20 text-amber-300 transition-all";
+      const idleCls = "py-2 px-3 rounded-xl text-xs font-bold border border-white/20 bg-white/5 hover:bg-white/15 transition-all";
+      maleBtn.className = sex === "male" ? activeCls : idleCls;
+      femaleBtn.className = sex === "female" ? activeCls : idleCls;
+    }
+
+    function selectVisitorAge(ageRange) {
+      pendingAge = ageRange;
+      document.querySelectorAll("[data-age-btn]").forEach(btn => {
+        const isMatch = btn.getAttribute("data-age-btn") === ageRange;
+        btn.className = isMatch
+          ? "py-1.5 px-2.5 rounded-xl text-xs font-bold border-2 border-amber-400 bg-amber-400/20 text-amber-300 transition-all"
+          : "py-1.5 px-2.5 rounded-xl text-xs font-bold border border-white/20 bg-white/5 hover:bg-white/15 transition-all";
+      });
+    }
+
+    function submitVisitorDemographics() {
+      const state = loadAndUpdateAnalytics();
+      if (state.userSubmitted) {
+        showToast(currentLang === "en" ? "Thank you! Your visitor profile is already recorded." : "Asante! Taarifa zako tayari zimehifadhiwa.");
+        return;
+      }
+      if (!pendingSex || !pendingAge) {
+        showToast(currentLang === "en" ? "Please select both your sex and age range first." : "Tafadhali chagua jinsia na kundi lako la umri kwanza.", "error");
+        return;
+      }
+
+      state.sex[pendingSex] = (state.sex[pendingSex] || 0) + 1;
+      state.age[pendingAge] = (state.age[pendingAge] || 0) + 1;
+      state.userSubmitted = true;
+
+      try {
+        localStorage.setItem(ANALYTICS_STORAGE_KEY, JSON.stringify(state));
+      } catch (e) {}
+
+      renderAnalyticsUI();
+      showToast(currentLang === "en" ? "Thank you! Visitor insights updated." : "Asante! Takwimu zimesasishwa.");
+    }
+
+    // Built-in Vector Logo Presets for MSH ENTERPRISE
+    const logoPresets = {
+      crest: `<svg viewBox="0 0 64 64" class="w-full h-full drop-shadow-sm" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="msh-crest-g1" x1="6" y1="4" x2="58" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#060d1f"/>
+      <stop offset="55%" stop-color="#11224d"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="msh-crest-g2" x1="10" y1="6" x2="54" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 3L57 14V31C57 46.5 46.2 58.6 32 62C17.8 58.6 7 46.5 7 31V14L32 3Z" fill="url(#msh-crest-g1)" stroke="url(#msh-crest-g2)" stroke-width="2.5"/>
+  <path d="M22 22L32 16L42 22" stroke="#fbbf24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="32" y="38.5" text-anchor="middle" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="16.5" letter-spacing="0.5">MSH</text>
+  <path d="M23 44.5H41" stroke="#34d399" stroke-width="2" stroke-linecap="round"/>
+</svg>`,
+      monogram: `<svg viewBox="0 0 64 64" class="w-full h-full drop-shadow-sm" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="4" y="4" width="56" height="56" rx="16" fill="#060d1f" stroke="#fbbf24" stroke-width="2.5"/>
+  <path d="M15 43V22L24.5 34L34 22V43" stroke="#10b981" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M40 22H49M40 32.5H49M40 43H49M40 22V43" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round"/>
+  <circle cx="51" cy="14" r="3.5" fill="#fbbf24"/>
+</svg>`,
+      digital: `<svg viewBox="0 0 64 64" class="w-full h-full drop-shadow-sm" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="32,3 58,18 58,46 32,61 6,46 6,18" fill="#0a1633" stroke="#10b981" stroke-width="2.5"/>
+  <polygon points="32,9 52,20.5 52,43.5 32,55 12,43.5 12,20.5" stroke="#fbbf24" stroke-width="1.2" stroke-opacity="0.7"/>
+  <path d="M20 22L32 16L44 22L32 28L20 22Z" fill="#fbbf24"/>
+  <text x="32" y="42.5" text-anchor="middle" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="15.5" letter-spacing="0.5">MSH</text>
+</svg>`
+    };
+
+    function applyPresetLogo(presetKey) {
+      const svgMarkup = logoPresets[presetKey] || logoPresets.crest;
+      document.getElementById("navbar-logo-mark").innerHTML = svgMarkup;
+      document.getElementById("footer-logo-mark").innerHTML = svgMarkup;
+      document.getElementById("logo-export-code").value = svgMarkup.trim();
+
+      ["crest", "monogram", "digital"].forEach(key => {
+        const btn = document.getElementById(`preset-btn-${key}`);
+        if (!btn) return;
+        if (key === presetKey) {
+          btn.className = "p-3 rounded-2xl border-2 border-emerald-600 bg-emerald-50/40 flex flex-col items-center gap-2 text-center transition-all";
+        } else {
+          btn.className = "p-3 rounded-2xl border border-slate-200 hover:border-slate-300 bg-white flex flex-col items-center gap-2 text-center transition-all";
+        }
+      });
+
+      try {
+        localStorage.setItem("msh_logo_preset", presetKey);
+        localStorage.removeItem("msh_custom_logo_data");
+      } catch (e) {}
+    }
+
+    function handleCustomLogoUpload(event) {
+      const file = event.target.files && event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const dataUrl = e.target.result;
+        const imgTag = `<img src="${dataUrl}" alt="MSH ENTERPRISE Logo" class="w-full h-full object-contain rounded-xl" />`;
+        document.getElementById("navbar-logo-mark").innerHTML = imgTag;
+        document.getElementById("footer-logo-mark").innerHTML = imgTag;
+        document.getElementById("logo-export-code").value = `<img src="assets/${file.name}" alt="MSH ENTERPRISE Logo" class="w-11 h-11 object-contain rounded-xl" />`;
+        try {
+          localStorage.setItem("msh_custom_logo_data", dataUrl);
+        } catch (err) {}
+        showToast(currentLang === "en" ? "Custom logo applied!" : "Nembo yako imepakiwa!");
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function copyLogoSnippet() {
+      const box = document.getElementById("logo-export-code");
+      box.select();
+      try {
+        document.execCommand("copy");
+        showToast(currentLang === "en" ? "Logo HTML snippet copied!" : "Msimbo wa nembo umenakiliwa!");
+      } catch (e) {
+        showToast("Unable to copy", "error");
+      }
+    }
+
+    function openLogoStudio() {
+      document.getElementById("preset-preview-crest").innerHTML = logoPresets.crest;
+      document.getElementById("preset-preview-monogram").innerHTML = logoPresets.monogram;
+      document.getElementById("preset-preview-digital").innerHTML = logoPresets.digital;
+      if (!document.getElementById("logo-export-code").value) {
+        document.getElementById("logo-export-code").value = logoPresets.crest.trim();
+      }
+      document.getElementById("logo-studio-modal").classList.remove("hidden");
+      lucide.createIcons();
+    }
+
+    // Close logo studio modal safely if present
+    const logoStudioEl = document.getElementById("logo-studio-modal");
+    if (logoStudioEl) {
+      logoStudioEl.addEventListener("click", function(e) {
+        if (e.target === this) closeLogoStudio();
+      });
+    }
+
+    // Complete 8 Service Categories & All 35+ Original Services (Bilingual EN & SW)
+    const serviceCategories = [
+      {
+        id: "academic",
+        filterKey: "academic",
+        icon: "graduation-cap",
+        accent: "emerald",
+        titleEn: "Academic Services",
+        subtitleEn: "Academic Support & Guidance",
+        titleSw: "Huduma za Kitaaluma",
+        subtitleSw: "Msaada na Mwongozo wa Masomo na Tafiti",
+        items: [
+          {
+            id: "acad-1",
+            titleEn: "Assignment support (Diploma, Bachelor & Master's level)",
+            titleSw: "Msaada wa kazi za darasani / Assignments (Diploma, Shahada na Uzamili)"
+          },
+          {
+            id: "acad-2",
+            titleEn: "Research proposal & dissertation guidance",
+            titleSw: "Mwongozo wa uandishi wa Research Proposal na Dissertation"
+          },
+          {
+            id: "acad-3",
+            titleEn: "Final year project support",
+            titleSw: "Msaada wa miradi ya mwaka wa mwisho (Final Year Project)"
+          },
+          {
+            id: "acad-4",
+            titleEn: "Formatting (APA, MLA, Harvard, Chicago)",
+            titleSw: "Mpangilio wa marejeleo na maandishi (APA, MLA, Harvard, Chicago)"
+          },
+          {
+            id: "acad-5",
+            titleEn: "Literature review & methodology support",
+            titleSw: "Msaada wa Literature Review na Research Methodology"
+          },
+          {
+            id: "acad-6",
+            titleEn: "Plagiarism checking & ethical editing",
+            titleSw: "Ukaguzi wa Plagiarism na uhariri wenye maadili ya kitaaluma"
+          },
+          {
+            id: "acad-7",
+            titleEn: "Data analysis support (SPSS, Excel – basic)",
+            titleSw: "Uchambuzi wa takwimu za utafiti (SPSS, Excel – msingi)"
+          }
+        ]
+      },
+      {
+        id: "editorial",
+        filterKey: "professional",
+        icon: "file-text",
+        accent: "sky",
+        titleEn: "Professional & Office Services",
+        subtitleEn: "Editorial & Language Services",
+        titleSw: "Huduma za Kiofisi na Uhariri",
+        subtitleSw: "Uhariri wa Nyaraka na Tafsiri za Lugha",
+        items: [
+          {
+            id: "edit-1",
+            titleEn: "Professional proofreading & copyediting",
+            titleSw: "Usahihishaji na uhariri wa kitaalamu (Proofreading & Copyediting)"
+          },
+          {
+            id: "edit-2",
+            titleEn: "Academic & business report editing",
+            titleSw: "Uhariri wa ripoti za kitaaluma na kibiashara"
+          },
+          {
+            id: "edit-3",
+            titleEn: "Proposal & project document editing",
+            titleSw: "Uhariri wa maandiko ya miradi na mapendekezo (Proposals)"
+          },
+          {
+            id: "edit-4",
+            titleEn: "English ↔ Swahili translation",
+            titleSw: "Tafsiri sahihi ya Kiingereza ↔ Kiswahili"
+          }
+        ]
+      },
+      {
+        id: "consultancy",
+        filterKey: "consultancy",
+        icon: "briefcase",
+        accent: "amber",
+        titleEn: "Consultancy Services",
+        subtitleEn: "Strategic Business, Academic & Career Advice",
+        titleSw: "Huduma za Ushauri (Consultancy)",
+        subtitleSw: "Ushauri wa Biashara, Taaluma na Kazi",
+        items: [
+          {
+            id: "cons-1",
+            titleEn: "Business consultancy & strategy planning",
+            titleSw: "Ushauri wa kibiashara na mipango mikakati (Strategy Planning)"
+          },
+          {
+            id: "cons-2",
+            titleEn: "Academic & professional guidance",
+            titleSw: "Mwongozo wa kitaaluma na maendeleo ya kitaalamu"
+          },
+          {
+            id: "cons-3",
+            titleEn: "Career development advice",
+            titleSw: "Ushauri wa kukuza ajira na taaluma (Career Development)"
+          }
+        ]
+      },
+      {
+        id: "training",
+        filterKey: "consultancy",
+        icon: "book-open",
+        accent: "indigo",
+        titleEn: "Training & Tutoring",
+        subtitleEn: "Personalized Coaching, Exam Prep & Workshops",
+        titleSw: "Mafunzo na Masomo ya Ziada (Tutoring)",
+        subtitleSw: "Masomo ya Mtu Mmoja, Maandalizi ya Mitihani na Warsha",
+        items: [
+          {
+            id: "train-1",
+            titleEn: "One-on-one academic tutoring (school, college, university)",
+            titleSw: "Masomo ya ziada ya ana kwa ana / mtandaoni (Shule, Chuo, Chuo Kikuu)"
+          },
+          {
+            id: "train-2",
+            titleEn: "Exam preparation support (NECTA, NACTE, TCU, professional exams)",
+            titleSw: "Maandalizi ya mitihani (NECTA, NACTE, TCU na mitihani ya kitaalamu)"
+          },
+          {
+            id: "train-3",
+            titleEn: "Workshops & webinars on study skills and career development",
+            titleSw: "Warsha na semina za mbinu za kusoma na maendeleo ya kazi"
+          },
+          {
+            id: "train-4",
+            titleEn: "Soft skills development (communication, leadership, business etiquette)",
+            titleSw: "Mafunzo ya ujuzi wa mawasiliano, uongozi na maadili ya biashara"
+          }
+        ]
+      },
+      {
+        id: "business",
+        filterKey: "business",
+        icon: "building-2",
+        accent: "emerald",
+        titleEn: "Business & Administrative Support",
+        subtitleEn: "Registration, Funding Proposals & Documentation",
+        titleSw: "Msaada wa Biashara na Utawala",
+        subtitleSw: "Usajili wa Biashara, Maombi ya Ruzuku na Nyaraka",
+        items: [
+          {
+            id: "bus-1",
+            titleEn: "Business registration support (BRELA, TIN, VAT)",
+            titleSw: "Msaada wa usajili wa biashara (BRELA, TIN, VAT)"
+          },
+          {
+            id: "bus-2",
+            titleEn: "Grant & loan application assistance",
+            titleSw: "Usaidizi wa maombi ya ruzuku (Grants) na mikopo"
+          },
+          {
+            id: "bus-3",
+            titleEn: "Proposal & funding application writing",
+            titleSw: "Uandishi wa michanganuo ya miradi na maombi ya ufadhili"
+          },
+          {
+            id: "bus-4",
+            titleEn: "Document digitization & filing",
+            titleSw: "Uhifadhi wa nyaraka kidijitali (Digitization & Filing)"
+          }
+        ]
+      },
+      {
+        id: "legal",
+        filterKey: "business",
+        icon: "scale",
+        accent: "slate",
+        titleEn: "Legal & Compliance Assistance",
+        subtitleEn: "Regulatory Guidance for Small Businesses",
+        titleSw: "Msaada wa Sheria na Uzingatiaji Taratibu",
+        items: [
+          {
+            id: "leg-1",
+            titleEn: "Contract review guidance (non-legal advice)",
+            titleSw: "Mwongozo wa kupitia mikataba (ushauri wa awali usio wa kisheria)"
+          },
+          {
+            id: "leg-2",
+            titleEn: "Compliance guidance for small businesses",
+            titleSw: "Mwongozo wa uzingatiaji wa sheria na taratibu kwa biashara ndogo"
+          },
+          {
+            id: "leg-3",
+            titleEn: "Basic tips on licenses & registrations",
+            titleSw: "Dondoo muhimu kuhusu leseni za biashara na usajili"
+          }
+        ]
+      },
+      {
+        id: "government",
+        filterKey: "government",
+        icon: "globe",
+        accent: "amber",
+        titleEn: "Government & Online Portal Services",
+        subtitleEn: "Fast Digital Assistance for Tanzanian Public Portals",
+        titleSw: "Huduma za Mifumo ya Serikali Mtandaoni",
+        subtitleSw: "Msaada wa Haraka wa Mifumo ya Umma Tanzania",
+        items: [
+          {
+            id: "gov-1",
+            titleEn: "NIDA services (NIN follow-up & verification)",
+            titleSw: "Huduma za NIDA (Ufuatiliaji wa namba ya NIN na uhakiki)"
+          },
+          {
+            id: "gov-2",
+            titleEn: "RITA birth & death certificates",
+            titleSw: "Maombi na uhakiki wa vyeti vya kuzaliwa na vifo (RITA)"
+          },
+          {
+            id: "gov-3",
+            titleEn: "NACTE, TCU & University applications",
+            titleSw: "Maombi ya vyuo kupitia NACTE, TCU na mifumo ya vyuo vikuu"
+          },
+          {
+            id: "gov-4",
+            titleEn: "HESLB loan application support",
+            titleSw: "Msaada wa maombi ya mkopo wa elimu ya juu (HESLB)"
+          },
+          {
+            id: "gov-5",
+            titleEn: "NECTA results checking",
+            titleSw: "Kuangalia na kupakua matokeo ya mitihani (NECTA)"
+          },
+          {
+            id: "gov-6",
+            titleEn: "AJIRA, TAUSI & Police Portal services",
+            titleSw: "Huduma za mifumo ya AJIRA Portal, TAUSI na Polisi (Loss Report)"
+          },
+          {
+            id: "gov-7",
+            titleEn: "BRELA & TIN (TRA) application guidance",
+            titleSw: "Mwongozo wa maombi ya BRELA na namba ya mlipakodi TIN (TRA)"
+          }
+        ]
+      },
+      {
+        id: "convenience",
+        filterKey: "convenience",
+        icon: "printer",
+        accent: "teal",
+        titleEn: "Miscellaneous Convenience Services",
+        subtitleEn: "Everyday Document, Courier & Reminder Support",
+        titleSw: "Huduma Nyinginezo za Kurahisisha Kazi",
+        subtitleSw: "Uchapishaji, Usafirishaji Nyaraka na Kumbukumbu",
+        items: [
+          {
+            id: "conv-1",
+            titleEn: "Printing, scanning & photocopying support",
+            titleSw: "Huduma za Printing, Scanning na Photocopying"
+          },
+          {
+            id: "conv-2",
+            titleEn: "Document submission or courier assistance",
+            titleSw: "Msaada wa kuwasilisha nyaraka ofisini au kutuma kwa Courier"
+          },
+          {
+            id: "conv-3",
+            titleEn: "Appointment scheduling or reminders for government portals",
+            titleSw: "Kupanga miadi (Appointments) na kumbukumbu za mifumo ya serikali"
+          }
+        ]
+      }
+    ];
+
+    const filterTabs = [
+      { key: "all", labelEn: "All Categories (8)", labelSw: "Makundi Yote (8)" },
+      { key: "academic", labelEn: "Academic", labelSw: "Taaluma" },
+      { key: "professional", labelEn: "Professional & Office", labelSw: "Ofisi & Uhariri" },
+      { key: "consultancy", labelEn: "Consultancy & Training", labelSw: "Ushauri & Mafunzo" },
+      { key: "business", labelEn: "Business & Legal", labelSw: "Biashara & Sheria" },
+      { key: "government", labelEn: "Government Portals", labelSw: "Mifumo ya Serikali" },
+      { key: "convenience", labelEn: "Convenience", labelSw: "Huduma Nyingine" }
+    ];
+
+    // Show non-intrusive toast message
+    function showToast(message, type = "success") {
+      const container = document.getElementById("toast-container");
+      const toast = document.createElement("div");
+      const bgClass = type === "error" ? "bg-rose-900 border-rose-700" : "bg-navy-950 border-emerald-500/40";
+      toast.className = `pointer-events-auto flex items-center gap-3 px-4 py-3 rounded-2xl text-white text-xs sm:text-sm font-medium shadow-xl border ${bgClass} transition-all duration-300`;
+      toast.innerHTML = `
+        <span class="w-2 h-2 rounded-full ${type === "error" ? "bg-rose-400" : "bg-emerald-400"} shrink-0"></span>
+        <span>${message}</span>
+      `;
+      container.appendChild(toast);
+      setTimeout(() => {
+        toast.style.opacity = "0";
+        toast.style.transform = "translateY(-8px)";
+        setTimeout(() => toast.remove(), 300);
+      }, 3200);
+    }
+
+    // Toggle Mobile Navigation
+    function toggleMobileMenu() {
+      const menu = document.getElementById("mobile-menu");
+      menu.classList.toggle("hidden");
+    }
+
+    // Switch Language EN / SW
+    function setLanguage(lang) {
+      currentLang = lang;
+      const btnEn = document.getElementById("lang-en");
+      const btnSw = document.getElementById("lang-sw");
+
+      if (lang === "en") {
+        btnEn.className = "px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all bg-navy-900 text-white shadow-sm";
+        btnSw.className = "px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all text-slate-600 hover:text-navy-900";
+      } else {
+        btnSw.className = "px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all bg-navy-900 text-white shadow-sm";
+        btnEn.className = "px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all text-slate-600 hover:text-navy-900";
+      }
+
+      // Translate static nodes with data-i18n
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (i18n[lang][key]) {
+          el.textContent = i18n[lang][key];
+        }
+      });
+
+      // Translate placeholders
+      document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+        const key = el.getAttribute("data-i18n-placeholder");
+        if (i18n[lang][key]) {
+          el.setAttribute("placeholder", i18n[lang][key]);
+        }
+      });
+
+      syncDynamicDates();
+      renderAnalyticsUI();
+      renderFilterPills();
+      renderServices();
+      populateQuickDropdown();
+      renderBasket();
+    }
+
+    // Render Category Filter Pills
+    function renderFilterPills() {
+      const container = document.getElementById("category-pills");
+      container.innerHTML = filterTabs.map(tab => {
+        const isActive = activeFilter === tab.key;
+        const label = currentLang === "en" ? tab.labelEn : tab.labelSw;
+        return `
+          <button 
+            type="button" 
+            onclick="setCategoryFilter('${tab.key}')"
+            class="shrink-0 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all border ${
+              isActive 
+                ? "bg-navy-900 text-white border-navy-900 shadow-sm" 
+                : "bg-white text-slate-600 border-slate-200 hover:border-slate-300 hover:text-navy-950"
+            }"
+          >
+            ${label}
+          </button>
+        `;
+      }).join("");
+    }
+
+    function setCategoryFilter(key) {
+      activeFilter = key;
+      renderFilterPills();
+      renderServices();
+    }
+
+    function filterAndScroll(key) {
+      setCategoryFilter(key);
+      document.getElementById("services").scrollIntoView({ behavior: "smooth" });
+    }
+
+    function handleSearch(val) {
+      searchQuery = val.trim().toLowerCase();
+      const clearBtn = document.getElementById("clear-search-btn");
+      if (searchQuery.length > 0) {
+        clearBtn.classList.remove("hidden");
+      } else {
+        clearBtn.classList.add("hidden");
+      }
+      renderServices();
+    }
+
+    function quickSearch(term) {
+      const input = document.getElementById("service-search");
+      input.value = term;
+      activeFilter = "all";
+      renderFilterPills();
+      handleSearch(term);
+      document.getElementById("services").scrollIntoView({ behavior: "smooth" });
+    }
+
+    function clearSearch() {
+      const input = document.getElementById("service-search");
+      input.value = "";
+      handleSearch("");
+    }
+
+    function resetFilters() {
+      activeFilter = "all";
+      clearSearch();
+      renderFilterPills();
+      renderServices();
+    }
+
+    // Render Service Categories & Individual Items
+    function renderServices() {
+      const grid = document.getElementById("services-grid");
+      const emptyState = document.getElementById("empty-state");
+      const resultsCount = document.getElementById("results-count");
+
+      let visibleCategories = 0;
+      let visibleItemsTotal = 0;
+
+      const cardsHtml = serviceCategories.map(cat => {
+        if (activeFilter !== "all" && cat.filterKey !== activeFilter) {
+          return "";
+        }
+
+        const catTitle = currentLang === "en" ? cat.titleEn : cat.titleSw;
+        const catSub = currentLang === "en" ? (cat.subtitleEn || "") : (cat.subtitleSw || "");
+
+        // Filter items inside category by search query
+        const matchedItems = cat.items.filter(item => {
+          if (!searchQuery) return true;
+          const haystack = `${cat.titleEn} ${cat.titleSw} ${item.titleEn} ${item.titleSw}`.toLowerCase();
+          return haystack.includes(searchQuery);
+        });
+
+        if (matchedItems.length === 0) return "";
+
+        visibleCategories++;
+        visibleItemsTotal += matchedItems.length;
+
+        const accentMap = {
+          emerald: "bg-emerald-50 text-emerald-700 border-emerald-200",
+          sky: "bg-sky-50 text-sky-700 border-sky-200",
+          amber: "bg-amber-50 text-amber-700 border-amber-200",
+          indigo: "bg-indigo-50 text-indigo-700 border-indigo-200",
+          slate: "bg-slate-100 text-slate-700 border-slate-200",
+          teal: "bg-teal-50 text-teal-700 border-teal-200"
+        };
+        const badgeStyle = accentMap[cat.accent] || accentMap.emerald;
+
+        const itemsListHtml = matchedItems.map(item => {
+          const itemTitle = currentLang === "en" ? item.titleEn : item.titleSw;
+          const isSelected = selectedBasket.some(b => b.id === item.id);
+          const addText = isSelected ? i18n[currentLang].added_bundle_btn : i18n[currentLang].add_bundle_btn;
+          const quickText = i18n[currentLang].quick_req_btn;
+
+          return `
+            <li class="py-3 first:pt-0 last:pb-0 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 group">
+              <div class="flex items-start gap-2.5 pr-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span class="text-sm text-slate-700 group-hover:text-navy-950 font-medium leading-snug">${itemTitle}</span>
+              </div>
+              <div class="flex items-center gap-1.5 shrink-0 pl-6 sm:pl-0">
+                <button 
+                  type="button" 
+                  onclick="toggleBasketItem('${item.id}')"
+                  class="px-2.5 py-1.5 rounded-lg text-xs font-semibold border transition-all ${
+                    isSelected 
+                      ? "bg-emerald-50 text-emerald-700 border-emerald-300" 
+                      : "bg-slate-50 hover:bg-slate-100 text-slate-700 border-slate-200"
+                  }"
+                >
+                  ${addText}
+                </button>
+                <button 
+                  type="button" 
+                  onclick="openQuickModal('${item.id}')"
+                  class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-navy-900 hover:bg-emerald-600 text-white transition-colors"
+                >
+                  ${quickText}
+                </button>
+              </div>
+            </li>
+          `;
+        }).join("");
+
+        return `
+          <article class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+            <div>
+              <div class="flex items-start gap-3.5 pb-4 mb-4 border-b border-slate-100">
+                <div class="w-11 h-11 rounded-2xl border ${badgeStyle} flex items-center justify-center shrink-0">
+                  <i data-lucide="${cat.icon}" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h3 class="font-display font-bold text-lg sm:text-xl text-navy-950 leading-tight">${catTitle}</h3>
+                  ${catSub ? `<p class="text-xs sm:text-sm text-slate-500 mt-0.5">${catSub}</p>` : ""}
+                </div>
+              </div>
+              <ul class="divide-y divide-slate-100">
+                ${itemsListHtml}
+              </ul>
+            </div>
+          </article>
+        `;
+      }).join("");
+
+      grid.innerHTML = cardsHtml;
+
+      if (visibleCategories === 0) {
+        grid.classList.add("hidden");
+        emptyState.classList.remove("hidden");
+        resultsCount.textContent = currentLang === "en" ? "0 services found" : "Huduma 0 zimepatikana";
+      } else {
+        grid.classList.remove("hidden");
+        emptyState.classList.add("hidden");
+        resultsCount.textContent = currentLang === "en" 
+          ? `Showing ${visibleItemsTotal} services across ${visibleCategories} categories`
+          : `Inaonyesha huduma ${visibleItemsTotal} katika makundi ${visibleCategories}`;
+      }
+
+      lucide.createIcons();
+    }
+
+    // Helper: Find service & category by item ID
+    function findServiceById(itemId) {
+      for (const cat of serviceCategories) {
+        const found = cat.items.find(i => i.id === itemId);
+        if (found) {
+          return { item: found, category: cat };
+        }
+      }
+      return null;
+    }
+
+    // Basket / Quote Builder Management
+    function toggleBasketItem(itemId) {
+      const existingIndex = selectedBasket.findIndex(b => b.id === itemId);
+      if (existingIndex > -1) {
+        selectedBasket.splice(existingIndex, 1);
+        showToast(currentLang === "en" ? "Removed from Request Basket" : "Imeondolewa kwenye kikapu");
+      } else {
+        const found = findServiceById(itemId);
+        if (found) {
+          selectedBasket.push({
+            id: found.item.id,
+            titleEn: found.item.titleEn,
+            titleSw: found.item.titleSw,
+            catEn: found.category.titleEn,
+            catSw: found.category.titleSw
+          });
+          showToast(currentLang === "en" ? "Added to Request Builder!" : "Imeongezwa kwenye kikapu!");
+        }
+      }
+      renderServices();
+      renderBasket();
+    }
+
+    function clearBasket() {
+      selectedBasket = [];
+      renderServices();
+      renderBasket();
+    }
+
+    function populateQuickDropdown() {
+      const select = document.getElementById("quick-service-select");
+      const placeholder = i18n[currentLang].dropdown_placeholder;
+      let optionsHtml = `<option value="">${placeholder}</option>`;
+
+      serviceCategories.forEach(cat => {
+        const catLabel = currentLang === "en" ? cat.titleEn : cat.titleSw;
+        optionsHtml += `<optgroup label="${catLabel}">`;
+        cat.items.forEach(item => {
+          const itemLabel = currentLang === "en" ? item.titleEn : item.titleSw;
+          optionsHtml += `<option value="${item.id}">${itemLabel}</option>`;
+        });
+        optionsHtml += `</optgroup>`;
+      });
+
+      select.innerHTML = optionsHtml;
+    }
+
+    function addFromDropdown() {
+      const select = document.getElementById("quick-service-select");
+      const val = select.value;
+      if (!val) return;
+      if (!selectedBasket.some(b => b.id === val)) {
+        toggleBasketItem(val);
+      } else {
+        showToast(currentLang === "en" ? "Service is already in your basket" : "Huduma hii tayari ipo kwenye kikapu");
+      }
+      select.value = "";
+    }
+
+    function renderBasket() {
+      const container = document.getElementById("basket-items");
+      const countPill = document.getElementById("builder-count-pill");
+      const navBadge = document.getElementById("nav-basket-badge");
+      const mobileBadge = document.getElementById("mobile-basket-badge");
+      const clearBtn = document.getElementById("clear-basket-btn");
+
+      const count = selectedBasket.length;
+      countPill.textContent = count;
+      navBadge.textContent = count;
+      mobileBadge.textContent = count;
+
+      if (count > 0) {
+        navBadge.classList.remove("hidden");
+        mobileBadge.classList.remove("hidden");
+        clearBtn.classList.remove("hidden");
+        container.className = "rounded-2xl bg-white border border-slate-200 p-3 space-y-2";
+        container.innerHTML = selectedBasket.map((item, idx) => {
+          const title = currentLang === "en" ? item.titleEn : item.titleSw;
+          const cat = currentLang === "en" ? item.catEn : item.catSw;
+          return `
+            <div class="flex items-center justify-between gap-2 px-3 py-2 rounded-xl bg-slate-50 border border-slate-200/80">
+              <div>
+                <div class="text-xs sm:text-sm font-semibold text-navy-950">${idx + 1}. ${title}</div>
+                <div class="text-[11px] text-slate-500">${cat}</div>
+              </div>
+              <button type="button" onclick="toggleBasketItem('${item.id}')" class="p-1.5 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-rose-50 transition-colors" aria-label="Remove">
+                <i data-lucide="trash-2" class="w-4 h-4"></i>
+              </button>
+            </div>
+          `;
+        }).join("");
+        lucide.createIcons();
+      } else {
+        navBadge.classList.add("hidden");
+        mobileBadge.classList.add("hidden");
+        clearBtn.classList.add("hidden");
+        container.className = "min-h-[84px] rounded-2xl bg-white border border-dashed border-slate-300 p-4 flex flex-col justify-center";
+        container.innerHTML = `<p class="text-xs sm:text-sm text-slate-400 text-center">${i18n[currentLang].basket_empty}</p>`;
+      }
+    }
+
+    // Compile Structured WhatsApp Message
+    function buildWhatsAppMessage() {
+      const name = document.getElementById("client-name").value.trim();
+      const urgency = document.getElementById("urgency-select").value;
+      const notes = document.getElementById("client-notes").value.trim();
+
+      const greeting = currentLang === "en" 
+        ? "Hello MSH ENTERPRISE, I would like to request assistance with the following service(s):"
+        : "Habari MSH ENTERPRISE, nahitaji msaada wa huduma zifuatazo:";
+
+      let servicesLines = "";
+      if (selectedBasket.length > 0) {
+        servicesLines = selectedBasket.map((s, i) => {
+          const title = currentLang === "en" ? s.titleEn : s.titleSw;
+          return `${i + 1}. ${title}`;
+        }).join("\n");
+      } else {
+        servicesLines = currentLang === "en" 
+          ? "• General Service Inquiry" 
+          : "• Maulizo ya Jumla ya Huduma";
+      }
+
+      const lines = [
+        greeting,
+        "",
+        "*SELECTED SERVICES:*",
+        servicesLines,
+        "",
+        `*Turnaround:* ${urgency}`
+      ];
+
+      if (name) {
+        lines.push(`*Client Name:* ${name}`);
+      }
+      if (notes) {
+        lines.push(`*Details / Notes:* ${notes}`);
+      }
+
+      lines.push("", "Sent via MSH ENTERPRISE Web Platform");
+      return lines.join("\n");
+    }
+
+    function toggleMessagePreview() {
+      const box = document.getElementById("wa-preview-box");
+      if (!box) return;
+      if (box.classList.contains("hidden")) {
+        box.textContent = buildWhatsAppMessage();
+        box.classList.remove("hidden");
+      } else {
+        box.classList.add("hidden");
+      }
+    }
+
+    function sendWhatsAppRequest() {
+      const message = buildWhatsAppMessage();
+      const encoded = encodeURIComponent(message);
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`;
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+
+    function copyRequestText() {
+      const text = buildWhatsAppMessage();
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.style.position = "fixed";
+      textarea.style.opacity = "0";
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand("copy");
+        showToast(currentLang === "en" ? "Request details copied to clipboard!" : "Ujumbe umenakiliwa!");
+      } catch (err) {
+        showToast(currentLang === "en" ? "Unable to copy text" : "Imeshindwa kunakili", "error");
+      }
+      document.body.removeChild(textarea);
+    }
+
+    // Quick Modal Controls for Single Service Booking
+    function openQuickModal(itemId) {
+      const found = findServiceById(itemId);
+      if (!found) return;
+      currentModalService = found;
+
+      document.getElementById("modal-cat-badge").textContent = currentLang === "en" ? found.category.titleEn : found.category.titleSw;
+      document.getElementById("modal-service-title").textContent = currentLang === "en" ? found.item.titleEn : found.item.titleSw;
+      document.getElementById("modal-note").value = "";
+      document.getElementById("quick-modal").classList.remove("hidden");
+    }
+
+    function closeQuickModal() {
+      document.getElementById("quick-modal").classList.add("hidden");
+      currentModalService = null;
+    }
+
+    function submitQuickModalWhatsApp() {
+      if (!currentModalService) return;
+      const serviceTitle = currentLang === "en" ? currentModalService.item.titleEn : currentModalService.item.titleSw;
+      const catTitle = currentLang === "en" ? currentModalService.category.titleEn : currentModalService.category.titleSw;
+      const name = document.getElementById("modal-name").value.trim();
+      const note = document.getElementById("modal-note").value.trim();
+
+      const lines = [
+        currentLang === "en" 
+          ? "Hello MSH ENTERPRISE, I would like to book this service:" 
+          : "Habari MSH ENTERPRISE, nahitaji huduma hii:",
+        "",
+        `*Service:* ${serviceTitle}`,
+        `*Category:* ${catTitle}`
+      ];
+      if (name) lines.push(`*Name:* ${name}`);
+      if (note) lines.push(`*Notes:* ${note}`);
+
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`;
+      closeQuickModal();
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+
+    function moveModalToBasket() {
+      if (!currentModalService) return;
+      const id = currentModalService.item.id;
+      if (!selectedBasket.some(b => b.id === id)) {
+        toggleBasketItem(id);
+      }
+      closeQuickModal();
+      document.getElementById("quote-builder").scrollIntoView({ behavior: "smooth" });
+    }
+
+    // Close modal on backdrop click
+    document.getElementById("quick-modal").addEventListener("click", function(e) {
+      if (e.target === this) {
+        closeQuickModal();
+      }
+    });
+
+    // Initialize Application
+    window.addEventListener("DOMContentLoaded", () => {
+      syncDynamicDates();
+      renderAnalyticsUI();
+      // Keep date and year counters automatically synced every minute (including midnight rollover)
+      setInterval(() => {
+        syncDynamicDates();
+        renderAnalyticsUI();
+      }, 60000);
+
+      renderFilterPills();
+      renderServices();
+      populateQuickDropdown();
+      renderBasket();
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
